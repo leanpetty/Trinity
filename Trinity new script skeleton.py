@@ -18,6 +18,7 @@ price14=random.randint(150000,200000)
 price15=random.randint(40000,100000)
 pricelenicara=random.randint(1,200000)
 
+#common weapons
 ww_steelsword = "Steel Sword"
 ww_claws = "Claws" 
 ww_bludgeon = "Bludgeon"
@@ -30,6 +31,7 @@ aw_dioritebow = "Refined Diorite Bow"
 aw_ivy = "Ivy"
 aw_breeze = "Breeze"
 
+#rare weapons
 ww_mallet = "Granite Mallet"
 ww_mandibles = "Mandibles"
 ww_gladius = "Golden Gladius"
@@ -42,6 +44,7 @@ aw_thunderbolt = "Thunderbolt"
 aw_trentbow = "Infused Trent Bow"
 aw_prizedbow = "Trinity's Prized Bow"
 
+#epic weapons
 ww_zweireaper = "Zweireaper"
 ww_greatsword = "Elven Greatsword"
 ww_gemcrusher = "Gemcrusher"
@@ -54,7 +57,7 @@ aw_ironstring = "Iron String"
 aw_flare = "Flare's Crest"
 aw_liam = "Liam's Fart"
 
-
+#legendary weapons
 w_rubythorn = "Ruby Thorn"
 w_drakefang = "Drake Fang Giantbone"
 w_broccomace = "Rune Mace Broccomace"
@@ -66,7 +69,7 @@ w_felflame = "Felflame"
 w_armblade = "Armblade"
 w_amaranth = "Amaranth"
 
-
+#god weapons
 gw_jahestirr = "Goaer's Recurve"
 gw_ara = "All-Powerful Rune"
 gw_esmyau = "Spellbreaker's Greatshield"
@@ -76,7 +79,35 @@ gw_lenicara = "Armageddon"
 gw_goaer = "Triple Pronged Mechanical Sword"
 
 def introspeech():
-    #intro
+    time.sleep(5)
+    input("Welcome to the island of Trinity.")
+    input("This small, unassuming island is actually home to the most amazing peoples imaginable.")
+    time.sleep(2)
+    input("These people have never left this island. Why would they? It was all they needed?")
+    print("")
+    input("But one day, a ship turned up on the horison, carrying the Barbarians.")
+    input("These Barbarians were lesser creatures, who believed they could subjugate all others to their will.")
+    time.sleep(3)
+    input("So they attacked the peoples, killing adults and children alike, and decimating their land for centuries to come.")
+    input("""Just five groups managed to survive this massacre:
+        the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
+    input("In the face of this danger, they joined arms and pushed back the invading Barbarians to the edge of the island.")
+    input("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
+    input("But the Rogues were not satisfied with this stalemate. They amassed an army, encompassing all the Rogues.")
+    input("They attacked the Barbarians, hoping to destroy them in all out war.")
+    time.sleep(7)
+    input("Not a single Rogue survived.")
+    print("")
+    print("")
+    time.sleep(2)
+    input("After the battle, the four surviving groups made a pact to always be allies, and to help protect each other from the Barbarians.")
+    input("As it turned out, the pact was worthless.")
+    input("The clans turned against each other, through need and mistrust, keeping few as each others allies.")
+    input("The Barbarians have made few raids on Trinity, but they continue to be an antagonistic presence.")
+    time.sleep(3)
+    input("And that brings our story up to now.")
+    input("Born to an archer mother and a warrior father, you symbolise a change.")
+    input("After years of training, you are finally ready to become a leader, and all the clans are clamouring to have you.")
 
 def clanchoice():
     #clanchoice
