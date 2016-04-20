@@ -110,7 +110,18 @@ def introspeech():
     input("After years of training, you are finally ready to become a leader, and all the clans are clamouring to have you.")
 
 def clanchoice():
-    #clanchoice
+    #for each choice, define a variable as being the clan choice to be used later in the program - Alex will do this
+    print("Which of the clans do you want to join?")
+    time.sleep(4)
+    ccinput=input("Warriors, Trents, Mages or Archers?")
+    if ccinput.lower() == warrior or ccinput.lower() == warriors:
+        #warriors
+    elif ccinput.lower() == trent or ccinput.lower() == trents:
+        #trents
+    elif ccinput.lower() == mage or ccinput.lower() == mages:
+        #mages
+    elif ccinput.lower() == archer or ccinput.lower() == archers:
+        #archers
 
 def initialsalesman():
     #salesman
@@ -120,8 +131,14 @@ def joinclan():
 
 def intro():
     introspeech()
+    print("")
+    time.sleep(2)
     clanchoice()
+    print("")
+    time.sleep(2)
     salesman()
+    print("")
+    time.sleep(2)
     joinclan()
 
 def trentinitialproblem():
