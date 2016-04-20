@@ -1,6 +1,6 @@
 import time
 import random
-
+import
 def introspeech():
     #intro
 
