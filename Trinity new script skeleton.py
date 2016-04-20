@@ -1,6 +1,23 @@
 import time
 import random
 
+price1=random.randint(50,1000)
+price2=random.randint(1000,2000)
+price3=random.randint(2000,2500)
+price4=random.randint(2500,4000)
+price5=random.randint(4000,8000)
+price6=random.randint(8000,10000)
+price7=random.randint(10000,15000)
+price8=random.randint(15000,25000)
+price9=random.randint(25000,35000)
+price10=random.randint(35000,40000)
+price11=random.randint(40000,60000)
+price12=random.randint(60000,100000)
+price13=random.randint(100000,150000)
+price14=random.randint(150000,200000)
+price15=random.randint(40000,100000)
+pricelenicara=random.randint(1,200000)
+
 ww_steelsword = "Steel Sword"
 ww_claws = "Claws" 
 ww_orcaxe = "Orc Axe"
