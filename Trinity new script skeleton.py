@@ -78,15 +78,38 @@ gw_trillini = "Hellreaver"
 gw_lenicara = "Armageddon"
 gw_goaer = "Triple Pronged Mechanical Sword"
 
+def characterchoice():
+    cchoiceloop=True
+    while cchoiceloop == True:
+        global charname
+        charname=input("What is your name?")
+        #in this case, 'char' means character, not charmaine
+        time.sleep(1)
+        print("Welcome to the game,", charname)
+        chargenderinput=input("Are you a boy or a girl?")
+        global chargender
+        if chargenderinput.lower() == "boy" or chargenderinput.lower() == "male" or chargenderinput.lower() == "man":
+            chargender="boy"
+            print("You are a boy.")
+            input("Press 'enter' to begin the game.")
+            cchoiceloop=False
+        elif chargenderinput.lower() == "girl" or chargenderinput.lower() == "female" or chargenderinput.lower() == "woman":
+            chargender="girl"
+            print("You are a girl.")
+            input("Press 'enter' to begin the game.")
+            cchoiceloop=False
+        else:
+            print("That was not one of the options. Start again.")
+
 def introspeech():
-    time.sleep(5)
-    input("Welcome to the island of Trinity.")
-    input("This small, unassuming island is actually home to the most amazing peoples imaginable.")
     time.sleep(2)
-    input("These people have never left this island. Why would they? It was all they needed?")
+    input("Welcome to the island of Trinity.")
+    input("This small, unassuming island was actually home to the most amazing peoples imaginable.")
+    time.sleep(2)
+    input("These people never left this island. Why would they? It was all they needed?")
     print("")
     input("But one day, a ship turned up on the horison, carrying the Barbarians.")
-    input("These Barbarians were lesser creatures, who believed they could subjugate all others to their will.")
+    input("These Barbarians were war loving creatures, who believed they could subjugate all others to their will.")
     time.sleep(3)
     input("So they attacked the peoples, killing adults and children alike, and decimating their land for centuries to come.")
     input("""Just five groups managed to survive this massacre:
@@ -95,7 +118,7 @@ def introspeech():
     input("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
     input("But the Rogues were not satisfied with this stalemate. They amassed an army, encompassing all the Rogues.")
     input("They attacked the Barbarians, hoping to destroy them in all out war.")
-    time.sleep(7)
+    time.sleep(4)
     input("Not a single Rogue survived.")
     print("")
     print("")
@@ -107,36 +130,100 @@ def introspeech():
     time.sleep(3)
     input("And that brings our story up to now.")
     input("Born to an archer mother and a warrior father, you symbolise a change.")
-    input("After years of training, you are finally ready to become a leader, and all the clans are clamouring to have you.")
+    input("""As a product of one of the few marriages between warring clans, it is widely believed that you can be the ruler who brings your clan to victory,
+either by yourself, or as all of Trinity united together. Like it or not, this is the responsibility you have been given.""")
+    input("Because of this possibility, you were sent away from all four clans, to be taught the ways of leading by a man who speaks with the gods themselves.")
+    input("After years of training, you return, finally ready to become a leader, and all the clans are clamouring to have you.")
 
 def clanchoice():
     #for each choice, define a variable as being the clan choice to be used later in the program - Alex will do this
-    print("Which of the clans do you want to join?")
+    print("Which of the clans do you want to lead?")
     time.sleep(4)
     ccinput=input("Warriors, Trents, Mages or Archers?")
-    if ccinput.lower() == warrior or ccinput.lower() == warriors:
-        #warriors
-    elif ccinput.lower() == trent or ccinput.lower() == trents:
-        #trents
-    elif ccinput.lower() == mage or ccinput.lower() == mages:
-        #mages
-    elif ccinput.lower() == archer or ccinput.lower() == archers:
-        #archers
+    global clan
+    global clanplural
+    if ccinput.lower() == "warrior" or ccinput.lower() == "warriors":
+        clan="warrior"
+        clanplural="warriors"
+        ccloop=False
+        
+    elif ccinput.lower() == "trent" or ccinput.lower() == "trents":
+        clan="trent"
+        clanplural="trents"
+        ccloop=False
+        
+    elif ccinput.lower() == "mage" or ccinput.lower() == "mages":
+        clan="mage"
+        clanplural="mages"
+        ccloop=False
+        
+    elif ccinput.lower() == "archer" or ccinput.lower() == "archers":
+        clan="archer"
+        clanplural="archers"
+        ccloop=False
+
+    else:
+        input("That was not one of the available choices. Try again")
+
+    if ccloop==False:
+        print("Welcome to the", clanplural, ".")
+    else:
+        print("")
 
 def initialsalesman():
     #salesman
+    print("For the last 3 centuries, it has been customary to give a gift to society upon taking up the position of ruler.")
+    time.sleep(2.5)
+    input("Luckily, there is a wondering salesman on the road you are taking.")
+    input("Having heard of you, he will give away one of his five weapons to you for free.")
+    print("You will be at his booth shortly.")
+    time.sleep(10)
+    print("You have arrived.")
+    time.sleep(0.5)
+    print("")
+    input("Salesman: Hello! Who are you? More importantly, would you like to buy something?")
+    print("You: Good afternoon, sir. My name is", charname, ", the new head of the", clan, "clan.")
+    input()
+    time.sleep(1)
+    print("Salesman: Really?")
+    time.sleep(0.5)
+    print("Salesman: I mean, hello", charname, "! I didn't recognise you! My most gracious apologies.")
+    input()
+    input("You: It's all right. I didn't have very good publicity in terms of my face.")
+    input("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 5 weapons.")
+    input("You: Really?")
+    input("""Salesman: Yes! Yes, really. This is a one time offer!
+I'm afraid I dont have much of a selection though. All I can offer is
+the..., the..., the..., the... or the... .
+Very basic weaponary.""")
+    #add 5 weapons specifically for this start-up sale - Ethan, then do the buying program - Liam
+    input("You: Thank you so much!")
+    input("You: I would stay, but I should really reach the town before sunset.")
+    if chargender == "boy":
+        input("Salesman: Of course! A young man like you must have lots to do.")
+    else:
+        input("Salesman: Of course! A young woman like you must have lots to do.")
+    input("You say goodbye, and head on to the town.")
+    
 
 def joinclan():
     #joinclan
+    input(print("Finally, you've made it to the town of the", clanplural, ". "))
+    input("Despite your wish to begin work right away, all you get is a nice meal and a place to sleep.")
+    input("But despite the jolly, carefree talk, all the officials seem worried.")
+    input("Unfortunately, by the time you notice, you're too tired to care, and decide to let it wait until tomorrow.")
 
 def intro():
+    characterchoice()
     introspeech()
     print("")
     time.sleep(2)
-    clanchoice()
-    print("")
+    ccloop=True
+    if ccloop==True:
+        clanchoice()
+        print("")
     time.sleep(2)
-    salesman()
+    initialsalesman()
     print("")
     time.sleep(2)
     joinclan()
