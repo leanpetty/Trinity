@@ -31,6 +31,18 @@ aw_dioritebow = "Refined Diorite Bow"
 aw_ivy = "Ivy"
 aw_breeze = "Breeze"
 
+mw_
+mw_
+mw_
+mw_
+mw_
+
+tw_
+tw_
+tw_
+tw_
+tw_
+
 #rare weapons
 ww_mallet = "Granite Mallet"
 ww_mandibles = "Mandibles"
@@ -44,6 +56,18 @@ aw_thunderbolt = "Thunderbolt"
 aw_trentbow = "Infused Trent Bow"
 aw_prizedbow = "Trinity's Prized Bow"
 
+mw_
+mw_
+mw_
+mw_
+mw_
+
+tw_
+tw_
+tw_
+tw_
+tw_
+
 #epic weapons
 ww_zweireaper = "Zweireaper"
 ww_greatsword = "Elven Greatsword"
@@ -51,11 +75,23 @@ ww_gemcrusher = "Gemcrusher"
 ww_katana = "Nethersteel Katana"
 ww_lunar = "Lunar Relic"
 
-aw_ignis = "Legolas' Ignis"
+aw_ignis = "Bowman's Ignis"
 aw_az = "Az"
 aw_ironstring = "Iron String"
 aw_flare = "Flare's Crest"
 aw_liam = "Liam's Fart"
+
+mw_
+mw_
+mw_
+mw_
+mw_
+
+tw_
+tw_
+tw_
+tw_
+tw_
 
 #legendary weapons
 w_rubythorn = "Ruby Thorn"
