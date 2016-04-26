@@ -75,7 +75,7 @@ ww_gemcrusher = "Gemcrusher"
 ww_katana = "Nethersteel Katana"
 ww_lunar = "Lunar Relic"
 
-aw_ignis = "Bowman's Ignis"
+aw_ignis = "Sharpshooter's Ignis"
 aw_az = "Az"
 aw_ironstring = "Iron String"
 aw_flare = "Flare's Crest"
