@@ -266,39 +266,51 @@ def intro():
 
 def trentinitialproblem():
     #tip
+    print("")
 
 def mageinitialproblem():
     #mip
+    print("")
 
 def warriorinitialproblem():
     #wip
+    print("")
 
 def archerinitialproblem():
     #aip
+    print("")
 
 def trentlife():
     #trentlife
+    print("")
 
 def magelife():
     #magelife
+    print("")
 
 def warriorlife():
     #warriorlife
+    print("")
 
 def archerlife():
     #archerlife
+    print("")
 
 def trentrand1():
     #random trentlife
+    print("")
 
 def magerand1():
     #random magelife
+    print("")
 
 def warriorrand1():
     #random warriorlife
+    print("")
 
 def archerrand1():
-    #random archerlifex
+    #random archerlife
+    print("")
 
 def trentgame():
     trentinitialproblem()
