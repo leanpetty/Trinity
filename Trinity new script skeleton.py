@@ -1,6 +1,32 @@
 import time
 import random
 
+#M % defs
+Mmagic=100
+Mworkforce=100
+Mmagicpower=100
+Mpop=random.randint(10000,20000)
+
+#T % defs
+fatigue=
+Tpop=random.randint(10000,20000)
+#W % defs
+Wpop=random.randint(10000,20000)
+
+#A % defs
+Apop=random.randint(10000,20000)
+Awood=
+
+#M crisis affects
+Mcrisis1=50
+Mcrisis2=7.7
+
+#T crisis affects
+
+#W crisis affects
+
+#A crisis affect
+
 price1=random.randint(50,1000)
 price2=random.randint(1000,2000)
 price3=random.randint(2000,2500)
