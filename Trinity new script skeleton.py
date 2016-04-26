@@ -18,7 +18,6 @@ price14=random.randint(150000,200000)
 price15=random.randint(40000,100000)
 pricelenicara=random.randint(1,200000)
 
-#common weapons
 ww_steelsword = "Steel Sword"
 ww_claws = "Claws" 
 ww_bludgeon = "Bludgeon"
@@ -31,13 +30,13 @@ aw_dioritebow = "Refined Diorite Bow"
 aw_ivy = "Ivy"
 aw_breeze = "Breeze"
 
-mw_
-mw_
-mw_
-mw_
-mw_
+mw_birchstick = "Birch Stick"
+mw_scarecrow = "Scarecrow's Staff"
+mw_candlestick = "Candlestick"
+mw_elderwand = "The Elder Wand"
+mw_flameburst = "Flameburst" #casted spell
 
-tw_
+tw_brassknuckle = "Brass Knuckles"
 tw_
 tw_
 tw_
@@ -56,11 +55,11 @@ aw_thunderbolt = "Thunderbolt"
 aw_trentbow = "Infused Trent Bow"
 aw_prizedbow = "Trinity's Prized Bow"
 
-mw_
-mw_
-mw_
-mw_
-mw_
+mw_earthliving = "Earthliving Staff"
+mw_ironstaff = "Iron Tipped Staff"
+mw_cane = "Wood Cane"
+mw_harp = "Petrified Harp"
+mw_arcanebolt = "Arcane Bolt" #casted spell
 
 tw_
 tw_
@@ -79,13 +78,13 @@ aw_ignis = "Sharpshooter's Ignis"
 aw_az = "Az"
 aw_ironstring = "Iron String"
 aw_flare = "Flare's Crest"
-aw_liam = "Liam's Fart"
+aw_cluster = "Clustershock"
 
-mw_
-mw_
-mw_
-mw_
-mw_
+mw_diablo = "El Diablo"
+mw_voidtwig = "Void Twig"
+mw_ancient = "Ancient Wand"
+mw_waterbreath = "Water Breath" #casted spells
+mw_liam = "Liam's Fart" #casted spell
 
 tw_
 tw_
