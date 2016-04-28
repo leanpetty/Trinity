@@ -254,8 +254,7 @@ def initialsalesman():
     input("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 5 weapons.")
     input("You: Really?")
     input("""Salesman: Yes! Yes, really. This is a one time offer!
-I'm afraid I dont have much of a selection though. All I can offer is
-the..., the..., the..., the... or the... .
+I'm afraid I dont have much of a selection though. All I can offer is Blade, Stick, Mallet, Bow
 Very basic weaponary.""")
     #add 5 weapons specifically for this start-up sale - Ethan, then do the buying program - Liam
     input("You: Thank you so much!")
