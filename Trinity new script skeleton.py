@@ -3,19 +3,57 @@ import random
 
 #M % defs
 Mmagic=100
-Mworkforce=100
-Mmagicpower=100
 Mpop=random.randint(10000,20000)
+Mminors=100
+Mworkforce=100
+Mwood=100
+Mmetals=100
+Mresources=100
+Mtaxes=100
+Mland=100
+Mspaceused=100
+Mhousing=100
+Mmilitary power=100
 
 #T % defs
-fatigue=
+Tfatigue=100
 Tpop=random.randint(10000,20000)
+Tminors=100
+Tworkforce=100
+Twood=100
+Tmetals=100
+Tresources=100
+Ttaxes=100
+Tland=100
+Tspaceused=100
+Thousing=100
+Tmilitary=100
+
 #W % defs
 Wpop=random.randint(10000,20000)
+Wminors=100
+Wworkforce=100
+Wwood=100
+Wmetals=100
+Wresources=100
+Wtaxes=100
+Wland=100
+Wspaceused=100
+Whousing=100
+Wmilitary=100
 
 #A % defs
 Apop=random.randint(10000,20000)
-Awood=
+Aminors=100
+Aworkforce=100
+Awood=100
+Ametals=100
+Aresources=100
+Ataxes=100
+Aland=100
+Aspace=100
+Ahousing=100
+Amilitary=100
 
 #M crisis affects
 Mcrisis1=50
