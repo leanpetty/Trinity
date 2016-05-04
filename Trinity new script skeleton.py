@@ -82,6 +82,26 @@ price14=random.randint(150000,200000)
 price15=random.randint(40000,100000)
 pricelenicara=random.randint(1,200000)
 
+w_commonweapons = []
+a_commonweapons = []
+m_commonweapons = []
+t_commonweapons = []
+
+w_rareweapons = []
+a_rareweapons = []
+m_rareweapons = []
+t_rareweapons = []
+
+w_epicweapons = []
+a_epicweapons = []
+m_epicweapons = []
+t_epicweapons = []
+
+legendaryweapons = []
+
+godweapons = []
+
+
 ww_steelsword = "Steel Sword"
 ww_claws = "Claws" 
 ww_bludgeon = "Bludgeon"
