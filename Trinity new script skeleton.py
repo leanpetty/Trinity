@@ -177,6 +177,9 @@ gw_trillini = "Hellreaver"
 gw_lenicara = "Armageddon"
 gw_goaer = "Triple Pronged Mechanical Sword"
 
+#your weapons
+yourweaponslist = []
+
 def characterchoice():
     cchoiceloop=True
     while cchoiceloop == True:
@@ -332,7 +335,31 @@ def trentinitialproblem():
 
 def mageinitialproblem():
     #mip
-    print("")
+    input("In the morning you wake up.")
+    input("Before you eat, you ask what the problem is that you noticed the night before.")
+    input("Your servants tell you:")
+    randmageinitialproblem=random.randint(7,9)
+    if randmageinitialproblem == 0 or randmageinitialproblem == 1 or randmageinitialproblem == 2 or randmageinitialproblem == 3 or randmageinitialproblem == 4 or randmageinitialproblem == 5 or randmageinitialproblem == 6:
+        input("'We forgot to sacrifice to Ara, the goddess of magic and love during a nobles wedding.'")
+        input("'She has cursed us by removing some of the magical powers of the world. This began a week ago.'")
+        input("'Thank goodness we aren't at war with anyone, or we would be destroyed.'")
+        global Mmagic
+        Mmagic=Mmagic-Mcrisis1
+        print("")
+        print("Each person's magical powers have gone down by", Mcrisis1, "%.")
+        input()
+    elif randmageinitialproblem == 7 or randmageinitialproblem == 8 or randmageinitialproblem == 9:
+        input("'Lenicara, the god of luck, has decided that luck is no longer in our favour.'")
+        input("'The last time this happened, thousands of years ago, half our population died.'")
+        input("'This time, it's nowhere near as bad, but it's still terrible.'")
+        input("'All of our seventh sons have fallen sick, and need urgent help or they will die.'")
+        global Mpop
+        OrigMpop=Mpop
+        mip2=Mpop//Mcrisis2
+        Mpop=Mpop-mip2
+        round(Mpop)
+        print("")
+        print("Your population has gone down from", OrigMpop, "to", Mpop,)
 
 def warriorinitialproblem():
     #wip
