@@ -97,9 +97,9 @@ a_epicweapons = []
 m_epicweapons = []
 t_epicweapons = []
 
-legendaryweapons = []
+legendaryweapons = [Legendary Weapons = [w_rubythorn, w_drakefang, w_voidtwig, w_broccomace, w_frostbite, w_enderfist, w_divide, w_gemini, w_felflame, w_armblade, w_amaranth]
 
-godweapons = []
+godweapons = [w_jahestirr, w_ara, w_esmyau, w_umisr, w_trillini, w_lenicara, w_goaer]
 
 
 ww_steelsword = "Steel Sword"
