@@ -60,10 +60,15 @@ Mcrisis1=50
 Mcrisis2=7.7
 
 #T crisis affects
+Tcrisis1=random.randint(20,30)
+Tcrisis2=random.randint(20,45)
 
 #W crisis affects
+Wcrisis1=random.randint(10,25)
+Wcrisis2=random.randint(20,45)
 
 #A crisis affect
+Acrisis1=random.randint(19,22)
 
 price1=random.randint(50,1000)
 price2=random.randint(1000,2000)
