@@ -385,37 +385,17 @@ def archerlife():
     #archerlife
     print("")
 
-def trentrand1():
-    #random trentlife
-    print("")
-
-def magerand1():
-    #random magelife
-    print("")
-
-def warriorrand1():
-    #random warriorlife
-    print("")
-
-def archerrand1():
-    #random archerlife
-    print("")
-
 def trentgame():
     trentinitialproblem()
-    trentrand1()
 
 def magegame():
     mageinitialproblem()
-    magerand1()
 
 def warriorgame():
     warriorinitialproblem()
-    warriorrand1()
 
 def archergame():
     archerinitialproblem()
-    archerrand1()
 
 def clangame():
     #if/elif from clanchoice()
