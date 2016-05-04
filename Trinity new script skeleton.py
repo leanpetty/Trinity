@@ -82,10 +82,10 @@ price14=random.randint(150000,200000)
 price15=random.randint(40000,100000)
 pricelenicara=random.randint(1,200000)
 
-w_commonweapons = []
-a_commonweapons = []
-m_commonweapons = []
-t_commonweapons = []
+w_commonweapons = [ww_steelsword, ww_claws, ww_blydgeon, ww_scimitar, ww_hammer]
+a_commonweapons = [aw_sprucebow, aw_longbow, aw_dioritebow, aw_ivy, aw_breeze]
+m_commonweapons = [mw_birchstick, mw_scarecrow, mw_candlestick, mw_elderwand, mw_flameburst]
+t_commonweapons = [tw_brassknuckle, tw_javelin, tw_spear, tw_cyclops, tw_scythe]
 
 w_rareweapons = []
 a_rareweapons = []
