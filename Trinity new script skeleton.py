@@ -92,15 +92,15 @@ a_commonweapons = [aw_sprucebow, aw_longbow, aw_dioritebow, aw_ivy, aw_breeze]
 m_commonweapons = [mw_birchstick, mw_scarecrow, mw_candlestick, mw_elderwand, mw_flameburst]
 t_commonweapons = [tw_brassknuckle, tw_javelin, tw_spear, tw_cyclops, tw_scythe]
 
-w_rareweapons = []
-a_rareweapons = []
-m_rareweapons = []
-t_rareweapons = []
+w_rareweapons = [ww_mallet, ww_mandibles, ww_gladius, ww_halberd, ww_doubleaxe]
+a_rareweapons = [aw_sharpshooter, aw_ivory, aw_thunderbolt, aw_trentbow, aw_prizebow]
+m_rareweapons = [mw_earthliving, mw_ironstaff, mw_cane, mw_harp, mw_arcanebolt]
+t_rareweapons = [tw_bullseye, tw_diorite, tw_blacksmith, tw_undying, tw_lion]
 
-w_epicweapons = []
-a_epicweapons = []
-m_epicweapons = []
-t_epicweapons = []
+w_epicweapons = [ww_zweireaper, ww_greatsword, ww_gemcrusher, ww_katana, ww_lunar]
+a_epicweapons = [aw_ignis, aw_az, aw_ironstring, aw_flare, aw_cluster]
+m_epicweapons = [mw_diablo, mw_voidtwig, mw_ancient, mw_waterbreath, mw_liam]
+t_epicweapons = [tw_warriorspear, tw_tidebinder, tw_harwol, tw_fierte, tw_frog]
 
 legendaryweapons = [Legendary Weapons = [w_rubythorn, w_drakefang, w_voidtwig, w_broccomace, w_frostbite, w_enderfist, w_divide, w_gemini, w_felflame, w_armblade, w_amaranth]
 
