@@ -125,7 +125,7 @@ mw_cane = "Wood Cane"
 mw_harp = "Petrified Harp"
 mw_arcanebolt = "Arcane Bolt" #casted spell
 
-tw_bullseye = "BULLEYE!"
+tw_bullseye = "BULLSEYE!"
 tw_diorite = "Impeccable Diorite Spear"
 tw_blacksmith = "Blacksmith's Hammer"
 tw_undying = "Undying Javelin"
