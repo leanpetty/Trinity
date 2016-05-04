@@ -101,10 +101,10 @@ mw_elderwand = "The Elder Wand"
 mw_flameburst = "Flameburst" #casted spell
 
 tw_brassknuckle = "Brass Knuckles"
-tw_
-tw_
-tw_
-tw_
+tw_javelin = "Javelin"
+tw_spear = "Warrior-Forged Spear"
+tw_cyclops = "Cyclops' Javelin"
+tw_scythe = "Scythe"
 
 #rare weapons
 ww_mallet = "Granite Mallet"
@@ -125,11 +125,11 @@ mw_cane = "Wood Cane"
 mw_harp = "Petrified Harp"
 mw_arcanebolt = "Arcane Bolt" #casted spell
 
-tw_
-tw_
-tw_
-tw_
-tw_
+tw_bullseye = "BULLEYE!"
+tw_diorite = "Impeccable Diorite Spear"
+tw_blacksmith = "Blacksmith's Hammer"
+tw_undying = "Undying Javelin"
+tw_lion = "Coeur de Lion"
 
 #epic weapons
 ww_zweireaper = "Zweireaper"
@@ -150,11 +150,11 @@ mw_ancient = "Ancient Wand"
 mw_waterbreath = "Water Breath" #casted spells
 mw_liam = "Liam's Fart" #casted spell
 
-tw_
-tw_
-tw_
-tw_
-tw_
+tw_warriorspear = "Warrior Infused Javelin"
+tw_tidebinder = "Tidebender's Spear"
+tw_harwrol = "Harwrol"
+tw_fierte = "Fiertè"
+tw_frog = "Golden Frog Poison"
 
 #legendary weapons
 w_rubythorn = "Ruby Thorn"
