@@ -13,7 +13,7 @@ Mtaxes=100
 Mland=100
 Mspaceused=100
 Mhousing=100
-Mmilitary power=100
+Mmilitarypower=100
 
 #T % defs
 Tfatigue=100
@@ -86,26 +86,6 @@ price13=random.randint(100000,150000)
 price14=random.randint(150000,200000)
 price15=random.randint(40000,100000)
 pricelenicara=random.randint(1,200000)
-
-w_commonweapons = [ww_steelsword, ww_claws, ww_blydgeon, ww_scimitar, ww_hammer]
-a_commonweapons = [aw_sprucebow, aw_longbow, aw_dioritebow, aw_ivy, aw_breeze]
-m_commonweapons = [mw_birchstick, mw_scarecrow, mw_candlestick, mw_elderwand, mw_flameburst]
-t_commonweapons = [tw_brassknuckle, tw_javelin, tw_spear, tw_cyclops, tw_scythe]
-
-w_rareweapons = [ww_mallet, ww_mandibles, ww_gladius, ww_halberd, ww_doubleaxe]
-a_rareweapons = [aw_sharpshooter, aw_ivory, aw_thunderbolt, aw_trentbow, aw_prizebow]
-m_rareweapons = [mw_earthliving, mw_ironstaff, mw_cane, mw_harp, mw_arcanebolt]
-t_rareweapons = [tw_bullseye, tw_diorite, tw_blacksmith, tw_undying, tw_lion]
-
-w_epicweapons = [ww_zweireaper, ww_greatsword, ww_gemcrusher, ww_katana, ww_lunar]
-a_epicweapons = [aw_ignis, aw_az, aw_ironstring, aw_flare, aw_cluster]
-m_epicweapons = [mw_diablo, mw_voidtwig, mw_ancient, mw_waterbreath, mw_liam]
-t_epicweapons = [tw_warriorspear, tw_tidebinder, tw_harwol, tw_fierte, tw_frog]
-
-legendaryweapons = [Legendary Weapons = [w_rubythorn, w_drakefang, w_voidtwig, w_broccomace, w_frostbite, w_enderfist, w_divide, w_gemini, w_felflame, w_armblade, w_amaranth]
-
-godweapons = [w_jahestirr, w_ara, w_esmyau, w_umisr, w_trillini, w_lenicara, w_goaer]
-
 
 ww_steelsword = "Steel Sword"
 ww_claws = "Claws" 
@@ -194,13 +174,32 @@ w_armblade = "Armblade"
 w_amaranth = "Amaranth"
 
 #god weapons
-gw_jahestirr = "Goaer's Recurve"
-gw_ara = "All-Powerful Rune"
-gw_esmyau = "Spellbreaker's Greatshield"
-gw_umisr = "Ominous Warblade of the Unbreakable"
-gw_trillini = "Hellreaver"
-gw_lenicara = "Armageddon"
-gw_goaer = "Triple Pronged Mechanical Sword"
+w_jahestirr = "Goaer's Recurve"
+w_ara = "All-Powerful Rune"
+w_esmyau = "Spellbreaker's Greatshield"
+w_umisr = "Ominous Warblade of the Unbreakable"
+w_trillini = "Hellreaver"
+w_lenicara = "Armageddon"
+w_goaer = "Triple Pronged Mechanical Sword"
+
+w_commonweapons = [ww_steelsword, ww_claws, ww_bludgeon, ww_scimitar, ww_hammer]
+a_commonweapons = [aw_sprucebow, aw_longbow, aw_dioritebow, aw_ivy, aw_breeze]
+m_commonweapons = [mw_birchstick, mw_scarecrow, mw_candlestick, mw_elderwand, mw_flameburst]
+t_commonweapons = [tw_brassknuckle, tw_javelin, tw_spear, tw_cyclops, tw_scythe]
+
+w_rareweapons = [ww_mallet, ww_mandibles, ww_gladius, ww_halberd, ww_doubleaxe]
+a_rareweapons = [aw_sharpshooter, aw_ivory, aw_thunderbolt, aw_trentbow, aw_prizedbow]
+m_rareweapons = [mw_earthliving, mw_ironstaff, mw_cane, mw_harp, mw_arcanebolt]
+t_rareweapons = [tw_bullseye, tw_diorite, tw_blacksmith, tw_undying, tw_lion]
+
+w_epicweapons = [ww_zweireaper, ww_greatsword, ww_gemcrusher, ww_katana, ww_lunar]
+a_epicweapons = [aw_ignis, aw_az, aw_ironstring, aw_flare, aw_cluster]
+m_epicweapons = [mw_diablo, mw_voidtwig, mw_ancient, mw_waterbreath, mw_liam]
+t_epicweapons = [tw_warriorspear, tw_tidebinder, tw_harwrol, tw_fierte, tw_frog]
+
+legendaryweapons = [w_rubythorn, w_drakefang, w_broccomace, w_frostbite, w_enderfist, w_divide, w_gemini, w_felflame, w_armblade, w_amaranth]
+
+godweapons = [w_jahestirr, w_ara, w_esmyau, w_umisr, w_trillini, w_lenicara, w_goaer]
 
 #your weapons
 yourweaponslist = []
@@ -231,20 +230,20 @@ def characterchoice():
 def introspeech():
     time.sleep(2)
     input("Welcome to the island of Trinity.")
-    input("This small, unassuming island was actually home to the most amazing peoples imaginable.")
+    input("This small, unassuming island was actually home to the most amazing people imaginable.")
     time.sleep(2)
-    input("These people never left this island. Why would they? It was all they needed?")
+    input("These people never left this island. Why would they? It was all they needed.")
     print("")
-    input("But one day, a ship turned up on the horison, carrying the Barbarians.")
+    input("But one day, a ship appeared on the horizon, carrying the Barbarians.")
     input("These Barbarians were war loving creatures, who believed they could subjugate all others to their will.")
     time.sleep(3)
-    input("So they attacked the peoples, killing adults and children alike, and decimating their land for centuries to come.")
+    input("So they attacked the Trinites, killing adults and children alike, and decimating their land for centuries to come.")
     input("""Just five groups managed to survive this massacre:
         the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
     input("In the face of this danger, they joined arms and pushed back the invading Barbarians to the edge of the island.")
     input("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
-    input("But the Rogues were not satisfied with this stalemate. They amassed an army, encompassing all the Rogues.")
-    input("They attacked the Barbarians, hoping to destroy them in all out war.")
+    input("But the Rogues were not satisfied with this stalemate.")
+    input("They amassed an army and attacked the Barbarians, hoping to destroy them in all out war.")
     time.sleep(4)
     input("Not a single Rogue survived.")
     print("")
@@ -252,15 +251,14 @@ def introspeech():
     time.sleep(2)
     input("After the battle, the four surviving groups made a pact to always be allies, and to help protect each other from the Barbarians.")
     input("As it turned out, the pact was worthless.")
-    input("The clans turned against each other, through need and mistrust, keeping few as each others allies.")
-    input("The Barbarians have made few raids on Trinity, but they continue to be an antagonistic presence.")
+    input("The clans turned against each other, through need and mistrust. There were few remaining alliances.")
+    input("The Barbarians have made few raids on Trinity, but they continue to be an menacing presence.")
     time.sleep(3)
     input("And that brings our story up to now.")
     input("Born to an archer mother and a warrior father, you symbolise a change.")
-    input("""As a product of one of the few marriages between warring clans, it is widely believed that you can be the ruler who brings your clan to victory,
-either by yourself, or as all of Trinity united together. Like it or not, this is the responsibility you have been given.""")
+    input(""" As a product of one of the few marriages between warring clans, it is widely believed that you can be the ruler who destroys the barbarians, either by defeating them using the resources of your clan, or by uniting all of Trinity to fight back. Like it or not, this is the responsibility you have been given.""")
     input("Because of this possibility, you were sent away from all four clans, to be taught the ways of leading by a man who speaks with the gods themselves.")
-    input("After years of training, you return, finally ready to become a leader, and all the clans are clamouring to have you.")
+    input("After years of training, you return, finally ready to become a leader, and all the clans are desperate to have you.")
 
 def clanchoice():
     #for each choice, define a variable as being the clan choice to be used later in the program - Alex will do this
@@ -302,7 +300,7 @@ def initialsalesman():
     print("For the last 3 centuries, it has been customary to give a gift to society upon taking up the position of ruler.")
     time.sleep(2.5)
     input("Luckily, there is a wondering salesman on the road you are taking.")
-    input("Having heard of you, he will give away one of his five weapons to you for free.")
+    input("Having heard of you, he will give away one of his four weapons to you for free.")
     print("You will be at his booth shortly.")
     time.sleep(10)
     print("You have arrived.")
@@ -316,26 +314,38 @@ def initialsalesman():
     time.sleep(0.5)
     print("Salesman: I mean, hello", charname, "! I didn't recognise you! My most gracious apologies.")
     input()
-    input("You: It's all right. I didn't have very good publicity in terms of my face.")
-    input("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 5 weapons.")
+    input("You: It's all right. Many people haven't seen me yet.")
+    input("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 4 weapons.")
     input("You: Really?")
     input("""Salesman: Yes! Yes, really. This is a one time offer!
-I'm afraid I dont have much of a selection though. All I can offer is Blade, Stick, Mallet, Bow
+I'm afraid I dont have much of a selection though. All I can offer is Blade, Stick, Mallet or Bow.
 Very basic weaponary.""")
-    #add 5 weapons specifically for this start-up sale - Ethan, then do the buying program - Liam
-    input("You: Thank you so much!")
-    input("You: I would stay, but I should really reach the town before sunset.")
+
+    weaponchoiceloop=True
+    while weaponchoiceloop==True:
+        firstweapon=input("Which weapon would you like to buy?")
+        if  firstweapon.lower()=="blade" or firstweapon.lower()=="stick" or firstweapon.lower()=="mallet" or firstweapon.lower()=="bow":
+            weaponchoiceloop=False
+        else:
+            input("That is not an option. Please choose again.")
+
+    print("The", firstweapon.lower(), "has been added to your weapons.")
+
+    print("You: Thank you so much!")
+    print("You: I would stay, but I should really reach the town before sunset.")
+
     if chargender == "boy":
         input("Salesman: Of course! A young man like you must have lots to do.")
     else:
-        input("Salesman: Of course! A young woman like you must have lots to do.")
+        input("Salesman: Of course! A young lady like you must have lots to do.")
     input("You say goodbye, and head on to the town.")
     
 
 def joinclan():
     #joinclan
-    input(print("Finally, you've made it to the town of the", clanplural, ". "))
-    input("Despite your wish to begin work right away, all you get is a nice meal and a place to sleep.")
+    print("Finally, you've made it to the town of the", clanplural, ". ")
+    input("Though you wish to begin work right away, the town's people are insistent that you eat and rest.")
+    input("On the way to your rooms, you banter with the officials who guide you.")
     input("But despite the jolly, carefree talk, all the officials seem worried.")
     input("Unfortunately, by the time you notice, you're too tired to care, and decide to let it wait until tomorrow.")
 
@@ -388,7 +398,29 @@ def mageinitialproblem():
 
 def warriorinitialproblem():
     #wip
-    print("")
+    input("In the morning you wake up.")
+    input("Before you eat, you ask what the problem is that you noticed the night before.")
+    input("Your servants tell you:")
+    randwarriorinitialproblem=random.randint(0,9)
+    if randwarriorinitialproblem == 0 or randwarriorinitialproblem == 1 or randwarriorinitialproblem == 2 or randwarriorinitialproblem == 3 or randwarriorinitialproblem == 4 or randwarriorinitialproblem == 5:
+        input("'The Trents have gone to war with the Archers.'")
+        input("'The Trents are our only wood supplier and can't supply new wood to us.'")
+        input("'Thank goodness we aren't at war with anyone, or we would be destroyed.'")
+        global Wwood
+        Wwood=Wwood-Wcrisis1
+        print("")
+        print("The clan's wood supply has decreased by", Wcrisis1, "%. You now have", Wwood, "pieces of wood.")
+        input()
+    elif randwarriorinitialproblem == 6 or randwarriorinitialproblem == 7 or randwarriorinitialproblem == 8 or randwarriorinitialproblem == 9:
+        input("'The Trents have gone to war with the Archers and as their allies we are obliged to provide them with troops.'")
+        global Wmilitary
+        OrigWmil=Wmilitary
+        Wmilitary=Wmilitary-Wcrisis1
+        print("")
+        print("Your military size has gone down from", OrigWmil, "to", round (Wmilitary))
+
+
+
 
 def archerinitialproblem():
     #aip
@@ -423,8 +455,17 @@ def archergame():
     archerinitialproblem()
 
 def clangame():
-    #if/elif from clanchoice()
+    if clan=="mage":
+        magegame()
+    elif clan=="warrior":
+        warriorgame()
+    elif clan=="archer":
+        archergame()
+    elif clan=="trent":
+        trentgame()
 
 def trinity():
     intro()
     clangame()
+
+trinity()
