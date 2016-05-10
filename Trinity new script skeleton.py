@@ -404,12 +404,30 @@ def warriorinitialproblem():
         print("")
         print("Your military size has gone down from", OrigWmil, "to", round (Wmilitary))
 
-
-
-
 def archerinitialproblem():
     #aip
-    print("")
+    input("In the morning you wake up")
+    input("Before you eat, you ask what the problem is you noticed the night before")
+    input("Your servants tell you:")
+    randarcherinitialproblem=random.randit()
+    if randarcherinitialproblem == 0 or randarcherinitialproblem == 1 or randarcherinitialproblem == 2 or randarcherinitialproblem == 3
+        input("'We have gone to war with the trents.'")
+        input("'However the Trents are outnumbering us and we are losing ground quickly.'")
+        input("'If this keeps up, we will end up losing lots of our territory to the trents.'")
+        global Aterritory
+        Aterritory=Aterritory-Acrisis1
+        print(" ")
+        print("The clan's territory has decreasded by", Acrisis1, "%. You now have", Aterritory, "acres of land.")
+        input()
+    elif randarcherinitialproblem == 6 or randarcherinitialproblem == 7 or randarcherinitialproblem == 8 or randarcherinitialproblem ==
+        input("'The monsoon season has started once again and our rivers have been flooded with muddy water, severely decreasing the fish population.'")
+        input("'The last time this happened nearly half of our population died from starvation.'")
+        input("'We will soon need to make trades with other clans for food if the entire clan were to survive.'")
+        global Afood
+        OrigAfood=Afood
+        Afood=Afood-Acrisis1
+        print(" ")
+        print("Your clan's food levels have gone down from", OrigAfood, "to", round (Afood)")
 
 def trentlife():
     #trentlife
