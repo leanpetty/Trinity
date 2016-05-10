@@ -210,7 +210,6 @@ def characterchoice():
         global charname
         charname=input("What is your name?")
         #in this case, 'char' means character, not charmaine
-        time.sleep(1)
         print("Welcome to the game,", charname)
         chargenderinput=input("Are you a boy or a girl?")
         global chargender
@@ -228,32 +227,26 @@ def characterchoice():
             print("That was not one of the options. Start again.")
 
 def introspeech():
-    time.sleep(2)
     input("Welcome to the island of Trinity.")
     input("This small, unassuming island was actually home to the most amazing people imaginable.")
-    time.sleep(2)
     input("These people never left this island. Why would they? It was all they needed.")
     print("")
     input("But one day, a ship appeared on the horizon, carrying the Barbarians.")
     input("These Barbarians were war loving creatures, who believed they could subjugate all others to their will.")
-    time.sleep(3)
     input("So they attacked the Trinites, killing adults and children alike, and decimating their land for centuries to come.")
     input("""Just five groups managed to survive this massacre:
-        the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
+    the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
     input("In the face of this danger, they joined arms and pushed back the invading Barbarians to the edge of the island.")
     input("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
     input("But the Rogues were not satisfied with this stalemate.")
     input("They amassed an army and attacked the Barbarians, hoping to destroy them in all out war.")
-    time.sleep(4)
     input("Not a single Rogue survived.")
     print("")
     print("")
-    time.sleep(2)
     input("After the battle, the four surviving groups made a pact to always be allies, and to help protect each other from the Barbarians.")
     input("As it turned out, the pact was worthless.")
     input("The clans turned against each other, through need and mistrust. There were few remaining alliances.")
     input("The Barbarians have made few raids on Trinity, but they continue to be an menacing presence.")
-    time.sleep(3)
     input("And that brings our story up to now.")
     input("Born to an archer mother and a warrior father, you symbolise a change.")
     input(""" As a product of one of the few marriages between warring clans, it is widely believed that you can be the ruler who destroys the barbarians, either by defeating them using the resources of your clan, or by uniting all of Trinity to fight back. Like it or not, this is the responsibility you have been given.""")
@@ -263,7 +256,6 @@ def introspeech():
 def clanchoice():
     #for each choice, define a variable as being the clan choice to be used later in the program - Alex will do this
     print("Which of the clans do you want to lead?")
-    time.sleep(4)
     ccinput=input("Warriors, Trents, Mages or Archers?")
     global clan
     global clanplural
@@ -298,20 +290,15 @@ def clanchoice():
 def initialsalesman():
     #salesman
     print("For the last 3 centuries, it has been customary to give a gift to society upon taking up the position of ruler.")
-    time.sleep(2.5)
     input("Luckily, there is a wondering salesman on the road you are taking.")
     input("Having heard of you, he will give away one of his four weapons to you for free.")
     print("You will be at his booth shortly.")
-    time.sleep(10)
     print("You have arrived.")
-    time.sleep(0.5)
     print("")
     input("Salesman: Hello! Who are you? More importantly, would you like to buy something?")
     print("You: Good afternoon, sir. My name is", charname, ", the new head of the", clan, "clan.")
     input()
-    time.sleep(1)
     print("Salesman: Really?")
-    time.sleep(0.5)
     print("Salesman: I mean, hello", charname, "! I didn't recognise you! My most gracious apologies.")
     input()
     input("You: It's all right. Many people haven't seen me yet.")
@@ -353,15 +340,12 @@ def intro():
     characterchoice()
     introspeech()
     print("")
-    time.sleep(2)
     ccloop=True
     if ccloop==True:
         clanchoice()
         print("")
-    time.sleep(2)
     initialsalesman()
     print("")
-    time.sleep(2)
     joinclan()
 
 def trentinitialproblem():
