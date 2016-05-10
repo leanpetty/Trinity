@@ -203,14 +203,23 @@ godweapons = [w_jahestirr, w_ara, w_esmyau, w_umisr, w_trillini, w_lenicara, w_g
 
 #your weapons
 yourweaponslist = []
+    
+#other lists
+traderexclamationsjoyful = ["Terrific!", "Fantastic", "Splendid!", "Perfect!", "Wonderful!", "Amazing!", "Marvellous!", "Magnificent!", "Superb!", "Splendid!", "Super!", "Great!", "Smashing!", "Phenomenal!", "Sensational!", "Fabulous!", "Fantabulous!"]
 
 def characterchoice():
     cchoiceloop=True
     while cchoiceloop == True:
         global charname
-        charname=input("What is your name?")
-        #in this case, 'char' means character, not charmaine
-        print("Welcome to the game,", charname)
+        cnameloop=True
+        while cnameloop==True:
+            charname=input("What is your name?")
+            if charname == "":
+                print("You have not typed anything")
+            else:
+                cnameloop==False
+            #in this case, 'char' means character, not charmaine
+            print("Welcome to the game,", charname)
         chargenderinput=input("Are you a boy or a girl?")
         global chargender
         if chargenderinput.lower() == "boy" or chargenderinput.lower() == "male" or chargenderinput.lower() == "man":
@@ -223,6 +232,18 @@ def characterchoice():
             print("You are a girl.")
             input("Press 'enter' to begin the game.")
             cchoiceloop=False
+        elif chargenderinput.lower() == "i don't know" or chargenderinput.lower() == "i dont know" or chargenderinput.lower() == "idk":
+            print("Then we'll decide for you.")
+            cnameidk=random.randint(0,1)
+            if cnameidk == 0:
+                print("You are a girl")
+                input("Press 'enter' to begin the game.")
+                cchoiceloop=False
+            elif cnameidk == 1:
+                print("You are a boy")
+                input("Press 'enter' to begin the game.")
+                cchoiceloop=False
+            
         else:
             print("That was not one of the options. Start again.")
 
@@ -235,7 +256,7 @@ def introspeech():
     input("These Barbarians were war loving creatures, who believed they could subjugate all others to their will.")
     input("So they attacked the Trinites, killing adults and children alike, and decimating their land for centuries to come.")
     input("""Just five groups managed to survive this massacre:
-    the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
+the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
     input("In the face of this danger, they joined arms and pushed back the invading Barbarians to the edge of the island.")
     input("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
     input("But the Rogues were not satisfied with this stalemate.")
@@ -304,14 +325,14 @@ def initialsalesman():
     input()
     input("You: It's all right. Many people haven't seen me yet.")
     input("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 4 weapons.")
-    input("You: Really?")
-    input("""Salesman: Yes! Yes, really. This is a one time offer!
-I'm afraid I dont have much of a selection though. All I can offer is Blade, Stick, Mallet or Bow.
+    input("You: Are you joking?")
+    input("""Salesman: No! I mean it. This is a one time offer!
+I'm afraid I dont have much of a selection at the moment though. All I can offer is a simple Blade, a Stick, a Mallet or an old Bow.
 Very basic weaponary.""")
 
     weaponchoiceloop=True
     while weaponchoiceloop==True:
-        firstweapon=input("Which weapon would you like to buy?")
+        firstweapon=input("Which weapon would you like to take?")
         if  firstweapon.lower()=="blade" or firstweapon.lower()=="stick" or firstweapon.lower()=="mallet" or firstweapon.lower()=="bow":
             weaponchoiceloop=False
         else:
@@ -410,7 +431,7 @@ def archerinitialproblem():
     input("Before you eat, you ask what the problem is you noticed the night before")
     input("Your servants tell you:")
     randarcherinitialproblem=random.randit()
-    if randarcherinitialproblem == 0 or randarcherinitialproblem == 1 or randarcherinitialproblem == 2 or randarcherinitialproblem == 3
+    if randarcherinitialproblem == 0 or randarcherinitialproblem == 1 or randarcherinitialproblem == 2 or randarcherinitialproblem == 3:
         input("'We have gone to war with the trents.'")
         input("'However the Trents are outnumbering us and we are losing ground quickly.'")
         input("'If this keeps up, we will end up losing lots of our territory to the trents.'")
@@ -419,7 +440,7 @@ def archerinitialproblem():
         print(" ")
         print("The clan's territory has decreasded by", Acrisis1, "%. You now have", Aterritory, "acres of land.")
         input()
-    elif randarcherinitialproblem == 6 or randarcherinitialproblem == 7 or randarcherinitialproblem == 8 or randarcherinitialproblem ==
+    elif randarcherinitialproblem == 6 or randarcherinitialproblem == 7 or randarcherinitialproblem == 8 or randarcherinitialproblem == 9:
         input("'The monsoon season has started once again and our rivers have been flooded with muddy water, severely decreasing the fish population.'")
         input("'The last time this happened nearly half of our population died from starvation.'")
         input("'We will soon need to make trades with other clans for food if the entire clan were to survive.'")
@@ -427,7 +448,29 @@ def archerinitialproblem():
         OrigAfood=Afood
         Afood=Afood-Acrisis1
         print(" ")
-        print("Your clan's food levels have gone down from", OrigAfood, "to", round (Afood)")
+        print("Your clan's food levels have gone down from", OrigAfood, "to", round(Afood))
+    
+    #the program for the salesman who visits in everyday life - can be edited for your own needs later, this one is specifically for Mages
+    def freetraderM():
+        print("Hello my dear friend!")
+        print("What do you want to buy today?")
+        #Note: The spaces here are so that on my computer with my settings, these are centered. I'll work on a way to have that done better for the future
+        print("""Options:
+                                                                Food                                                       Weapons
+    
+                                                                                             Materials""")
+        freetradein=input("")
+        freetradein = freetradein.lower()
+        if freetradein == "food":
+            print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
+            print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
+        elif freetradein == "weapons":
+            print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
+            print("And don't worry, all the correct sacrifices have been carried. They won't betray you in battle.")
+        elif freetradein == "materials":
+            print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
+            print("They might not be as cheap as those from your other friends, but I come round many times more often!")
+            print("Its only fair you buy from me instead.")
 
 def trentlife():
     #trentlife
@@ -447,15 +490,19 @@ def archerlife():
 
 def trentgame():
     trentinitialproblem()
+    trentlife()
 
 def magegame():
     mageinitialproblem()
+    magelife()
 
 def warriorgame():
     warriorinitialproblem()
+    warriorlife()
 
 def archergame():
     archerinitialproblem()
+    archerlife()
 
 def clangame():
     if clan=="mage":
