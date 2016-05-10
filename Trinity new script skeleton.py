@@ -256,36 +256,37 @@ def introspeech():
 def clanchoice():
     #for each choice, define a variable as being the clan choice to be used later in the program - Alex will do this
     print("Which of the clans do you want to lead?")
-    ccinput=input("Warriors, Trents, Mages or Archers?")
+    time.sleep(4)
     global clan
     global clanplural
-    if ccinput.lower() == "warrior" or ccinput.lower() == "warriors":
-        clan="warrior"
-        clanplural="warriors"
-        ccloop=False
-        
-    elif ccinput.lower() == "trent" or ccinput.lower() == "trents":
-        clan="trent"
-        clanplural="trents"
-        ccloop=False
-        
-    elif ccinput.lower() == "mage" or ccinput.lower() == "mages":
-        clan="mage"
-        clanplural="mages"
-        ccloop=False
-        
-    elif ccinput.lower() == "archer" or ccinput.lower() == "archers":
-        clan="archer"
-        clanplural="archers"
-        ccloop=False
+    ccloop = True
+    while ccloop==True:
+        ccinput=input("Warriors, Trents, Mages or Archers?")
+        if ccinput.lower() == "warrior" or ccinput.lower() == "warriors":
+            clan="warrior"
+            clanplural="warriors"
+            ccloop=False
+            
+        elif ccinput.lower() == "trent" or ccinput.lower() == "trents":
+            clan="trent"
+            clanplural="trents"
+            ccloop=False
+            
+        elif ccinput.lower() == "mage" or ccinput.lower() == "mages":
+            clan="mage"
+            clanplural="mages"
+            ccloop=False
+            
+        elif ccinput.lower() == "archer" or ccinput.lower() == "archers":
+            clan="archer"
+            clanplural="archers"
+            ccloop=False
+    
+        else:
+            input("That was not one of the available choices. Try again")
+    
 
-    else:
-        input("That was not one of the available choices. Try again")
-
-    if ccloop==False:
-        print("Welcome to the", clanplural, ".")
-    else:
-        print("")
+    print("Welcome to the", clanplural, ".")
 
 def initialsalesman():
     #salesman
