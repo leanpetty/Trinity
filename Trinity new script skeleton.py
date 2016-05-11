@@ -4,10 +4,11 @@ import random
 #M % defs
 Mmagic=100
 Mpop=random.randint(10000,20000)
-Mminors=100
-Mworkforce=100
+Mminors=round(0.1*Mpop)
+Mworkforce=Mpop-Mminors
 Mwood=100
 Mmetals=100
+Mfood=100
 Mresources=100
 Mtaxes=100
 Mland=100
@@ -18,10 +19,11 @@ Mmilitarypower=100
 #T % defs
 Tfatigue=100
 Tpop=random.randint(10000,20000)
-Tminors=100
-Tworkforce=100
+Tminors=round(0.1*Tpop)
+Tworkforce=Tpop-Tminors
 Twood=100
 Tmetals=100
+Tfood=100
 Tresources=100
 Ttaxes=100
 Tland=100
@@ -31,10 +33,11 @@ Tmilitary=100
 
 #W % defs
 Wpop=random.randint(10000,20000)
-Wminors=100
-Wworkforce=100
+Wminors=round(0.1*Wpop)
+Wworkforce=Wpop-Wminors
 Wwood=100
 Wmetals=100
+Wfood=100
 Wresources=100
 Wtaxes=100
 Wland=100
@@ -44,10 +47,11 @@ Wmilitary=100
 
 #A % defs
 Apop=random.randint(10000,20000)
-Aminors=100
-Aworkforce=100
+Aminors=round(0.1*Apop)
+Aworkforce=Apop-Aminors
 Awood=100
 Ametals=100
+Afood=100
 Aresources=100
 Ataxes=100
 Aland=100
@@ -56,7 +60,7 @@ Ahousing=100
 Amilitary=100
 
 #M crisis affects
-Mcrisis1=50
+Mcrisis1=random.randint(45,55)
 Mcrisis2=7.7
 
 #T crisis affects
@@ -214,69 +218,105 @@ def characterchoice():
         cnameloop=True
         while cnameloop==True:
             charname=input("What is your name?")
+            print("")
             if charname == "":
-                print("You have not typed anything")
+                print("You have not typed anything, try again.")
+                print("")
             else:
-                cnameloop==False
+                cnameloop=False
             #in this case, 'char' means character, not charmaine
             print("Welcome to the game,", charname)
+            print("")
+            print("")
         chargenderinput=input("Are you a boy or a girl?")
+        print("")
         global chargender
         if chargenderinput.lower() == "boy" or chargenderinput.lower() == "male" or chargenderinput.lower() == "man":
             chargender="boy"
             print("You are a boy.")
+            print("")
             input("Press 'enter' to begin the game.")
             cchoiceloop=False
         elif chargenderinput.lower() == "girl" or chargenderinput.lower() == "female" or chargenderinput.lower() == "woman":
             chargender="girl"
             print("You are a girl.")
+            print("")
             input("Press 'enter' to begin the game.")
             cchoiceloop=False
         elif chargenderinput.lower() == "i don't know" or chargenderinput.lower() == "i dont know" or chargenderinput.lower() == "idk":
             print("Then we'll decide for you.")
+            print("")
             cnameidk=random.randint(0,1)
             if cnameidk == 0:
+                chargender="girl"
                 print("You are a girl")
+                print("")
                 input("Press 'enter' to begin the game.")
                 cchoiceloop=False
             elif cnameidk == 1:
+                chargender="boy"
                 print("You are a boy")
+                print("")
                 input("Press 'enter' to begin the game.")
                 cchoiceloop=False
             
         else:
             print("That was not one of the options. Start again.")
+            print("")
 
 def introspeech():
-    input("Welcome to the island of Trinity.")
-    input("This small, unassuming island was actually home to the most amazing people imaginable.")
-    input("These people never left this island. Why would they? It was all they needed.")
     print("")
-    input("But one day, a ship appeared on the horizon, carrying the Barbarians.")
-    input("These Barbarians were war loving creatures, who believed they could subjugate all others to their will.")
-    input("So they attacked the Trinites, killing adults and children alike, and decimating their land for centuries to come.")
-    input("""Just five groups managed to survive this massacre:
+    print("Welcome to the island of Trinity.")
+    input()
+    print("This small, unassuming island was actually home to the most amazing people imaginable.")
+    input()
+    print("These people never left this island. Why would they? It was all they needed.")
+    input()
+    print("")
+    print("But one day, a ship appeared on the horizon, carrying the Barbarians.")
+    input()
+    print("These Barbarians were war loving creatures, who believed they could subjugate all others to their will.")
+    input()
+    print("So they attacked the Trinites, killing adults and children alike, and decimating their land for centuries to come.")
+    input()
+    print("""Just five groups managed to survive this massacre:
 the Trents, the Mages, the Archers, the Warriors and the Rogues.""")
-    input("In the face of this danger, they joined arms and pushed back the invading Barbarians to the edge of the island.")
-    input("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
-    input("But the Rogues were not satisfied with this stalemate.")
-    input("They amassed an army and attacked the Barbarians, hoping to destroy them in all out war.")
-    input("Not a single Rogue survived.")
+    input()
+    print("In the face of this danger, they joined arms and pushed back the invading Barbarians to the edge of the island.")
+    input()
+    print("Most of the groups realised that they did not have the strength to defeat the Barbarians, and stopped their attack there.")
+    input()
+    print("But the Rogues were not satisfied with this stalemate.")
+    input()
+    print("They amassed an army and attacked the Barbarians, hoping to destroy them in all out war.")
+    input()
+    print("Not a single Rogue survived.")
+    input()
     print("")
     print("")
-    input("After the battle, the four surviving groups made a pact to always be allies, and to help protect each other from the Barbarians.")
-    input("As it turned out, the pact was worthless.")
-    input("The clans turned against each other, through need and mistrust. There were few remaining alliances.")
-    input("The Barbarians have made few raids on Trinity, but they continue to be an menacing presence.")
-    input("And that brings our story up to now.")
-    input("Born to an archer mother and a warrior father, you symbolise a change.")
-    input(""" As a product of one of the few marriages between warring clans, it is widely believed that you can be the ruler who destroys the barbarians, either by defeating them using the resources of your clan, or by uniting all of Trinity to fight back. Like it or not, this is the responsibility you have been given.""")
-    input("Because of this possibility, you were sent away from all four clans, to be taught the ways of leading by a man who speaks with the gods themselves.")
-    input("After years of training, you return, finally ready to become a leader, and all the clans are desperate to have you.")
+    print("After the battle, the four surviving groups made a pact to always be allies, and to help protect each other from the Barbarians.")
+    input()
+    print("As it turned out, the pact was worthless.")
+    input()
+    print("The clans turned against each other, through need and mistrust. There were few remaining alliances.")
+    input()
+    print("The Barbarians have made few raids on Trinity, but they continue to be an menacing presence.")
+    input()
+    print("And that brings our story up to now.")
+    input()
+    print("Born to an archer mother and a warrior father, you symbolise a change.")
+    input()
+    print(""" As a product of one of the few marriages between warring clans, it is widely believed that you can be the ruler who destroys the barbarians, either by defeating them using the resources of your clan, or by uniting all of Trinity to fight back. Like it or not, this is the responsibility you have been given.""")
+    input()
+    print("Because of this possibility, you were sent away from all four clans, to be taught the ways of leading by a man who speaks with the gods themselves.")
+    input()
+    print("After years of training, you return, finally ready to become a leader, and all the clans are desperate to have you.")
+    input()
 
 def clanchoice():
     #for each choice, define a variable as being the clan choice to be used later in the program - Alex will do this
     print("Which of the clans do you want to lead?")
+    print("")
     time.sleep(4)
     global clan
     global clanplural
@@ -304,31 +344,45 @@ def clanchoice():
             ccloop=False
     
         else:
+            print("")
             input("That was not one of the available choices. Try again")
     
 
+    print("")
     print("Welcome to the", clanplural, ".")
 
 def initialsalesman():
     #salesman
     print("For the last 3 centuries, it has been customary to give a gift to society upon taking up the position of ruler.")
-    input("Luckily, there is a wondering salesman on the road you are taking.")
-    input("Having heard of you, he will give away one of his four weapons to you for free.")
+    input()
+    print("Luckily, there is a wondering salesman on the road you are taking.")
+    input()
+    print("Having heard of you, he will give away one of his four weapons to you for free.")
+    input()
     print("You will be at his booth shortly.")
+    input()
     print("You have arrived.")
+    input()
     print("")
-    input("Salesman: Hello! Who are you? More importantly, would you like to buy something?")
+    print("Salesman: Hello! Who are you? More importantly, would you like to buy something?")
+    input()
     print("You: Good afternoon, sir. My name is", charname, ", the new head of the", clan, "clan.")
     input()
+    print("")
     print("Salesman: Really?")
+    input()
     print("Salesman: I mean, hello", charname, "! I didn't recognise you! My most gracious apologies.")
     input()
-    input("You: It's all right. Many people haven't seen me yet.")
-    input("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 4 weapons.")
-    input("You: Are you joking?")
-    input("""Salesman: No! I mean it. This is a one time offer!
+    print("You: It's all right. Many people haven't seen me yet.")
+    input()
+    print("Salesman: Oh, all right then. But tell you what, as compensation for not recognising you, take any of my 4 weapons.")
+    input()
+    print("You: Are you joking?")
+    input()
+    print("""Salesman: No! I mean it. This is a one time offer!
 I'm afraid I dont have much of a selection at the moment though. All I can offer is a simple Blade, a Stick, a Mallet or an old Bow.
 Very basic weaponary.""")
+    input()
 
     weaponchoiceloop=True
     while weaponchoiceloop==True:
@@ -336,27 +390,41 @@ Very basic weaponary.""")
         if  firstweapon.lower()=="blade" or firstweapon.lower()=="stick" or firstweapon.lower()=="mallet" or firstweapon.lower()=="bow":
             weaponchoiceloop=False
         else:
-            input("That is not an option. Please choose again.")
+            print("That is not an option. Please choose again.")
 
+    print("")
     print("The", firstweapon.lower(), "has been added to your weapons.")
+    input()
 
     print("You: Thank you so much!")
+    input()
     print("You: I would stay, but I should really reach the town before sunset.")
+    input()
 
     if chargender == "boy":
-        input("Salesman: Of course! A young man like you must have lots to do.")
+        print("Salesman: Of course! A young man like you must have lots to do.")
+        input()
     else:
-        input("Salesman: Of course! A young lady like you must have lots to do.")
-    input("You say goodbye, and head on to the town.")
+        print("Salesman: Of course! A young lady like you must have lots to do.")
+        input()
+        print("")
+    print("You say goodbye, and head on to the town.")
+    input()
     
 
 def joinclan():
     #joinclan
     print("Finally, you've made it to the town of the", clanplural, ". ")
-    input("Though you wish to begin work right away, the town's people are insistent that you eat and rest.")
-    input("On the way to your rooms, you banter with the officials who guide you.")
-    input("But despite the jolly, carefree talk, all the officials seem worried.")
-    input("Unfortunately, by the time you notice, you're too tired to care, and decide to let it wait until tomorrow.")
+    input()
+    print("Though you wish to begin work right away, the town's people are insistent that you eat and rest.")
+    input()
+    print("On the way to your rooms, you banter with the officials who guide you.")
+    input()
+    print("But despite the jolly, carefree talk, all the officials seem worried.")
+    input()
+    print("Unfortunately, by the time you notice, you're too tired to care, and decide to let it wait until tomorrow.")
+    input()
+    print("")
 
 def intro():
     characterchoice()
@@ -376,74 +444,102 @@ def trentinitialproblem():
 
 def mageinitialproblem():
     #mip
-    input("In the morning you wake up.")
-    input("Before you eat, you ask what the problem is that you noticed the night before.")
-    input("Your servants tell you:")
+    print("In the morning you wake up.")
+    input()
+    print("Before you eat, you ask what the problem is that you noticed the night before.")
+    input()
+    print("Your servants tell you:")
+    input()
     randmageinitialproblem=random.randint(7,9)
     if randmageinitialproblem == 0 or randmageinitialproblem == 1 or randmageinitialproblem == 2 or randmageinitialproblem == 3 or randmageinitialproblem == 4 or randmageinitialproblem == 5 or randmageinitialproblem == 6:
-        input("'We forgot to sacrifice to Ara, the goddess of magic and love during a nobles wedding.'")
-        input("'She has cursed us by removing some of the magical powers of the world. This began a week ago.'")
-        input("'Thank goodness we aren't at war with anyone, or we would be destroyed.'")
+        print("We forgot to sacrifice to Ara, the goddess of magic and love during a nobles wedding.")
+        input()
+        print("She has cursed us by removing some of the magical powers of the world. This began a week ago.")
+        input()
+        print("Thank goodness we aren't at war with anyone, or we would be destroyed.")
+        input()
         global Mmagic
         Mmagic=Mmagic-Mcrisis1
         print("")
         print("Each person's magical powers have gone down by", Mcrisis1, "%.")
         input()
     elif randmageinitialproblem == 7 or randmageinitialproblem == 8 or randmageinitialproblem == 9:
-        input("'Lenicara, the god of luck, has decided that luck is no longer in our favour.'")
-        input("'The last time this happened, thousands of years ago, half our population died.'")
-        input("'This time, it's nowhere near as bad, but it's still terrible.'")
-        input("'All of our seventh sons have fallen sick, and need urgent help or they will die.'")
-        global Mpop
-        OrigMpop=Mpop
-        mip2=Mpop//Mcrisis2
-        Mpop=Mpop-mip2
-        round(Mpop)
+        print("Lenicara, the god of luck, has decided that luck is no longer in our favour.")
+        input()
+        print("The last time this happened, thousands of years ago, half our population died.")
+        input()
+        print("This time, it's nowhere near as bad, but it's still terrible.")
+        input()
+        print("All of our seventh sons have fallen sick, and need lots of attention or they will die.")
+        input()
+        global Mworkforce
+        OrigMworkforce=Mworkforce
+        mip2=Mworkforce//Mcrisis2
+        Mworkforce=Mworkforce-mip2
+        round(Mworkforce)
         print("")
-        print("Your population has gone down from", OrigMpop, "to", Mpop,)
+        print("Your workforce has gone down from", OrigMworkforce, "to", Mworkforce,)
+        input()
 
 def warriorinitialproblem():
     #wip
-    input("In the morning you wake up.")
-    input("Before you eat, you ask what the problem is that you noticed the night before.")
-    input("Your servants tell you:")
+    print("In the morning you wake up.")
+    input()
+    print("Before you eat, you ask what the problem is that you noticed the night before.")
+    input()
+    print("Your servants tell you:")
+    input()
     randwarriorinitialproblem=random.randint(0,9)
     if randwarriorinitialproblem == 0 or randwarriorinitialproblem == 1 or randwarriorinitialproblem == 2 or randwarriorinitialproblem == 3 or randwarriorinitialproblem == 4 or randwarriorinitialproblem == 5:
-        input("'The Trents have gone to war with the Archers.'")
-        input("'The Trents are our only wood supplier and can't supply new wood to us.'")
-        input("'Thank goodness we aren't at war with anyone, or we would be destroyed.'")
+        print("The Trents have gone to war with the Archers.")
+        input()
+        print("The Trents are our only wood supplier and can't supply new wood to us.")
+        input()
+        print("Thank goodness we aren't at war with anyone, or we would be destroyed.")
+        input()
         global Wwood
         Wwood=Wwood-Wcrisis1
         print("")
         print("The clan's wood supply has decreased by", Wcrisis1, "%. You now have", Wwood, "pieces of wood.")
         input()
     elif randwarriorinitialproblem == 6 or randwarriorinitialproblem == 7 or randwarriorinitialproblem == 8 or randwarriorinitialproblem == 9:
-        input("'The Trents have gone to war with the Archers and as their allies we are obliged to provide them with troops.'")
+        print("The Trents have gone to war with the Archers and as their allies we are obliged to provide them with troops.")
+        input()
         global Wmilitary
         OrigWmil=Wmilitary
         Wmilitary=Wmilitary-Wcrisis1
         print("")
         print("Your military size has gone down from", OrigWmil, "to", round (Wmilitary))
+        input()
 
 def archerinitialproblem():
     #aip
-    input("In the morning you wake up")
-    input("Before you eat, you ask what the problem is you noticed the night before")
-    input("Your servants tell you:")
+    print("In the morning you wake up")
+    input()
+    print("Before you eat, you ask what the problem is you noticed the night before")
+    input()
+    print("Your servants tell you:")
+    input()
     randarcherinitialproblem=random.randit()
     if randarcherinitialproblem == 0 or randarcherinitialproblem == 1 or randarcherinitialproblem == 2 or randarcherinitialproblem == 3:
-        input("'We have gone to war with the trents.'")
-        input("'However the Trents are outnumbering us and we are losing ground quickly.'")
-        input("'If this keeps up, we will end up losing lots of our territory to the trents.'")
-        global Aterritory
-        Aterritory=Aterritory-Acrisis1
+        print("'We have gone to war with the Trents.'")
+        input()
+        print("'However the Trents are outnumbering us and we are losing ground quickly.'")
+        input()
+        print("'If this keeps up, we will end up losing lots of our territory to the trents.'")
+        input()
+        global Aland
+        Aland=Aland-Acrisis1
         print(" ")
-        print("The clan's territory has decreasded by", Acrisis1, "%. You now have", Aterritory, "acres of land.")
+        print("The clan's territory has decreasded by", Acrisis1, "%. You now have", Aland, "acres of land.")
         input()
     elif randarcherinitialproblem == 6 or randarcherinitialproblem == 7 or randarcherinitialproblem == 8 or randarcherinitialproblem == 9:
-        input("'The monsoon season has started once again and our rivers have been flooded with muddy water, severely decreasing the fish population.'")
-        input("'The last time this happened nearly half of our population died from starvation.'")
-        input("'We will soon need to make trades with other clans for food if the entire clan were to survive.'")
+        print("'The monsoon season has started once again and our rivers have been flooded with muddy water, severely decreasing the fish population.'")
+        input()
+        print("'The last time this happened nearly half of our population died from starvation.'")
+        input()
+        print("'We will soon need to make trades with other clans for food if the entire clan were to survive.'")
+        input()
         global Afood
         OrigAfood=Afood
         Afood=Afood-Acrisis1
@@ -453,7 +549,9 @@ def archerinitialproblem():
     #the program for the salesman who visits in everyday life - can be edited for your own needs later, this one is specifically for Mages
     def freetraderM():
         print("Hello my dear friend!")
+        input()
         print("What do you want to buy today?")
+        input()
         #Note: The spaces here are so that on my computer with my settings, these are centered. I'll work on a way to have that done better for the future
         print("""Options:
                                                                 Food                                                       Weapons
@@ -463,14 +561,21 @@ def archerinitialproblem():
         freetradein = freetradein.lower()
         if freetradein == "food":
             print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
+            input()
             print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
+            input()
         elif freetradein == "weapons":
             print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
-            print("And don't worry, all the correct sacrifices have been carried. They won't betray you in battle.")
+            input()
+            print("And don't worry, all the correct sacrifices have been made. Your weapons won't turn on you in battle.")
+            input()
         elif freetradein == "materials":
             print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
+            input()
             print("They might not be as cheap as those from your other friends, but I come round many times more often!")
+            input()
             print("Its only fair you buy from me instead.")
+            input()
 
 def trentlife():
     #trentlife
@@ -519,3 +624,4 @@ def trinity():
     clangame()
 
 trinity()
+
