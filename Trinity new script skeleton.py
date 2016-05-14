@@ -520,7 +520,7 @@ def archerinitialproblem():
     input()
     print("Your servants tell you:")
     input()
-    randarcherinitialproblem=random.randit()
+    randarcherinitialproblem=random.randint(0,9)
     if randarcherinitialproblem == 0 or randarcherinitialproblem == 1 or randarcherinitialproblem == 2 or randarcherinitialproblem == 3:
         print("'We have gone to war with the Trents.'")
         input()
@@ -533,7 +533,7 @@ def archerinitialproblem():
         print(" ")
         print("The clan's territory has decreasded by", Acrisis1, "%. You now have", Aland, "acres of land.")
         input()
-    elif randarcherinitialproblem == 6 or randarcherinitialproblem == 7 or randarcherinitialproblem == 8 or randarcherinitialproblem == 9:
+    elif randarcherinitialproblem == 4 or randarcherinitialproblem == 5 or randarcherinitialproblem == 6 or randarcherinitialproblem == 7 or randarcherinitialproblem == 8 or randarcherinitialproblem == 9:
         print("'The monsoon season has started once again and our rivers have been flooded with muddy water, severely decreasing the fish population.'")
         input()
         print("'The last time this happened nearly half of our population died from starvation.'")
