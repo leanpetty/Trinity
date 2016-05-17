@@ -15,6 +15,7 @@ Mland=100
 Mspaceused=100
 Mhousing=100
 Mmilitarypower=100
+Mhappy=100
 
 #T % defs
 Tfatigue=100
@@ -30,6 +31,7 @@ Tland=100
 Tspaceused=100
 Thousing=100
 Tmilitary=100
+Thappy=100
 
 #W % defs
 Wpop=random.randint(10000,20000)
@@ -44,6 +46,7 @@ Wland=100
 Wspaceused=100
 Whousing=100
 Wmilitary=100
+Whappy=100
 
 #A % defs
 Apop=random.randint(10000,20000)
@@ -58,6 +61,7 @@ Aland=100
 Aspace=100
 Ahousing=100
 Amilitary=100
+Ahappy=100
 
 #M crisis affects
 Mcrisis1=random.randint(45,55)
