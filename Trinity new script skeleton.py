@@ -1,6 +1,17 @@
 import time
 import random
 
+global krikor
+krikor=40000
+
+Jsacriprice=85
+Asacriprice=60
+Esacriprice=70
+Usacriprice=35
+Tsacriprice=55
+Lsacriprice=65
+Gsacriprice=100
+
 #M % defs
 Mmagic=100
 Mpop=random.randint(10000,20000)
