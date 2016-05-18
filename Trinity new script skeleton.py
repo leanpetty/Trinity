@@ -2,6 +2,27 @@ import time
 import random
 
 global krikor
+global Mresources
+global Mhappy
+global Mpop
+global Mmilitary
+global Mmagic
+
+global Tresources
+global Thappy
+global Tpop
+global Tmilitary
+
+global Wresources
+global Whappy
+global Wpop
+global Wmilitary
+
+global Aresources
+global Ahappy
+global Apop
+global Amilitary
+
 krikor=40000
 
 Jsacriprice=85
@@ -18,6 +39,7 @@ traderexclamationsjoyful = ["Terrific!", "Fantastic", "Splendid!", "Perfect!", "
 Mmagic=100
 Mpop=random.randint(10000,20000)
 Mminors=round(0.1*Mpop)
+Mhappy=100
 Mworkforce=Mpop-Mminors
 Mwood=100
 Mmetals=100
@@ -34,6 +56,7 @@ Mhappy=100
 Tfatigue=100
 Tpop=random.randint(10000,20000)
 Tminors=round(0.1*Tpop)
+Thappy=100
 Tworkforce=Tpop-Tminors
 Twood=100
 Tmetals=100
@@ -49,6 +72,7 @@ Thappy=100
 #W % defs
 Wpop=random.randint(10000,20000)
 Wminors=round(0.1*Wpop)
+Whappy=100
 Wworkforce=Wpop-Wminors
 Wwood=100
 Wmetals=100
@@ -64,6 +88,7 @@ Whappy=100
 #A % defs
 Apop=random.randint(10000,20000)
 Aminors=round(0.1*Apop)
+Ahappy=100
 Aworkforce=Apop-Aminors
 Awood=100
 Ametals=100
