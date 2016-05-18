@@ -138,33 +138,77 @@ ww_claws = "Claws"
 ww_bludgeon = "Bludgeon"
 ww_scimitar = "Scimitar"
 ww_hammer = "Hammer"
+#new weapons
+ww_sabre = "Sabre"
+ww_ida = "Ida Sword"
+ww_bolo = "Bolo Sword"
+ww_hook = "Hook"
+ww_mallet = "Granite Mallet"
+ww_strongwood = "Strongwood Club"
+ww_longknife = "Long Knife"
+ww_dagger = "Dagger"
+ww_katana = "Katana Sword"
+ww_bonesword = "Bone Sword"
 
 aw_sprucebow = "Spruce Bow"
 aw_longbow = "Oak Longbow"
 aw_dioritebow = "Refined Diorite Bow"
 aw_ivy = "Ivy"
 aw_breeze = "Breeze"
+#new weapons
+aw_sharpshooter = "Sharpshooter's Arch"
+aw_crossbow = "Crossbow"
+aw_pocketbow = "Pocket Bow"
+aw_recurve = "Recurve Bow"
+aw_hellburner = "Hellburner"
+aw_skullbreaker = "Skullbreaker"
+aw_tridentarrow = "Trident Arrow"
+aw_meet = "Meeter"
+aw_knife = "Knife"
+aw_barrager = "Barrager"
 
 mw_birchstick = "Birch Stick"
 mw_scarecrow = "Scarecrow's Staff"
 mw_candlestick = "Candlestick"
-mw_elderwand = "The Elder Wand"
+mw_ grotti = "Grotti"
 mw_flameburst = "Flameburst" #casted spell
+#new weapons
+mw_thunderlord = "Thunderlord"
+mw_mercy = "Merciful Killer"
+mw_icestorm = "Icestorm" #casted spell
+mw_enchantsword = "Enchanted Sword
+mw_void = "Void Staff"
+mw_silverlance = "Silver Lance"
+mw_runicbook = "Book of Runes"
+mw_skystaff = "Staff of the Sky"
+mw_strength = "Strength" #casted spell
+mw_tearbringer = "Tear Bringer"
 
 tw_brassknuckle = "Brass Knuckles"
 tw_javelin = "Javelin"
 tw_spear = "Warrior-Forged Spear"
 tw_cyclops = "Cyclops' Javelin"
 tw_scythe = "Scythe"
+#new weapons
+tw_lance = "Metal Lance"
+tw_bluepike = "Blue Pike"
+tw_tribute = "Tribute to Fallen Foes"
+tw_trident = "Antique Trident"
+tw_bloodspear = "Blood-Spear"
+tw_harpoon = "Harpoon"
+tw_forkspear = "Forked Spear"
+tw_heavymace = "Heavy Mace"
+tw_deathseeker = "Deathseeker"
+tw_staff = "Staff"
 
 #rare weapons
-ww_mallet = "Granite Mallet"
+ww_butterfly = "Butterfly Sword
 ww_mandibles = "Mandibles"
 ww_gladius = "Golden Gladius"
 ww_halberd = "Halberd"
 ww_doubleaxe = "Double-Sided Axe"
 
-aw_sharpshooter = "Sharpshooter's Arch"
+aw_threebow = "Three Arrow Bow"
 aw_ivory = "Petrified Ivory Bow"
 aw_thunderbolt = "Thunderbolt"
 aw_trentbow = "Infused Trent Bow"
@@ -176,7 +220,7 @@ mw_cane = "Wood Cane"
 mw_harp = "Petrified Harp"
 mw_arcanebolt = "Arcane Bolt" #casted spell
 
-tw_bullseye = "BULLSEYE!"
+tw_bullseye = "Bullseye!"
 tw_diorite = "Impeccable Diorite Spear"
 tw_blacksmith = "Blacksmith's Hammer"
 tw_undying = "Undying Javelin"
@@ -220,7 +264,7 @@ w_armblade = "Armblade"
 w_amaranth = "Amaranth"
 
 #god weapons
-w_jahestirr = "Goaer's Recurve"
+w_jahestirr = "Goaer's Gift"
 w_ara = "All-Powerful Rune"
 w_esmyau = "Spellbreaker's Greatshield"
 w_umisr = "Ominous Warblade of the Unbreakable"
