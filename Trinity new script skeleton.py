@@ -12,6 +12,8 @@ Tsacriprice=55
 Lsacriprice=65
 Gsacriprice=100
 
+traderexclamationsjoyful = ["Terrific!", "Fantastic", "Splendid!", "Perfect!", "Wonderful!", "Amazing!", "Marvellous!", "Magnificent!", "Superb!", "Splendid!", "Super!", "Great!", "Smashing!", "Phenomenal!", "Sensational!", "Fabulous!", "Fantabulous!"]
+
 #M % defs
 Mmagic=100
 Mpop=random.randint(10000,20000)
