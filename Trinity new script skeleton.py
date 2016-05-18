@@ -673,17 +673,14 @@ def freetraderW():
             input()
             weapontradeloop = False
 
-            def function(random_epic_wweapon):
-                if epicweaponluck == 7:
-                    group_of_epic_wweapons ={"Zweireaper", "Greatsword", "Gemcrusher", "Katana", "Lunar Relic"}
-                    num_to_select = 1
-                    list_of_random_epic_wweapons = random.sample(group_of_epic_wweapons, num_to_select)
-                    random_epic_wweapon = list_of_random_epic_wweapons[0]
-                    print("Oh my. What is this...looks like you're in luck today! It seems as if I have an epic weapon in stock - the", random_epic_wweapon,"!")
-                else:
-                    print("")
-                return random_epic_wweapon - 1
-            function(1)
+             group_of_epic_wweapons ={"Zweireaper", "Greatsword", "Gemcrusher", "Katana", "Lunar Relic"}
+            num_to_select = 1
+            list_of_random_epic_aweapons = random.sample(group_of_epic_wweapons, num_to_select)
+            random_epic_aweapon = list_of_random_epic_wweapons[0]
+            if epicweaponluck == 7:
+                print("Oh my. What is this...looks like you're in luck today! It seems as if I have an epic weapon in stock - the", random_epic_aweapon,"!")
+            else:
+                print("")
 
             typedweapon=str(input("Which weapon would you like to purchase? Please note that I am case sensitive."))
             if typedweapon in {first_random_common_wweapon}:
