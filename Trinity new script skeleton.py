@@ -695,7 +695,7 @@ def freetraderW():
         weapontradeloop = True
         while weapontradeloop == True:
 
-            group_of_common_wweapons = {"Steel Sword", "Claws", "Bludgeon", "Scimitar", "Hammer", "Liam"} #remove liam and add the 10 more weapons
+            group_of_common_wweapons = {"Steel Sword", "Claws", "Bludgeon", "Scimitar", "Hammer", "Sabre", "Ida Sword", "Bolo Sword", "Hook", "Granite Mallet", "Strongwood Club", "Long Knife", "Dagger", "Katana Sword", "Bone Sword"}
             num_to_select = 6
             list_of_random_common_wweapons = random.sample(group_of_common_wweapons, num_to_select)
             first_random_common_wweapon = list_of_random_common_wweapons[0]
@@ -705,7 +705,7 @@ def freetraderW():
             fifth_random_common_wweapon = list_of_random_common_wweapons[4]
             sixth_random_common_wweapon = list_of_random_common_wweapons[5]
 
-            group_of_rare_wweapons = {"Mallet", "Mandibles", "Gladius", "Halberd", "Doubleaxe"}
+            group_of_rare_wweapons = {"Butterfly Sword", "Mandibles", "Gladius", "Halberd", "Doubleaxe"}
             num_to_select = 2
             list_of_random_rare_wweapons = random.sample(group_of_rare_wweapons, num_to_select)
             first_random_rare_wweapon = list_of_random_rare_wweapons[0]
