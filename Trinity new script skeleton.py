@@ -272,13 +272,13 @@ w_trillini = "Hellreaver"
 w_lenicara = "Armageddon"
 w_goaer = "Triple Pronged Mechanical Sword"
 
-w_commonweapons = [ww_steelsword, ww_claws, ww_bludgeon, ww_scimitar, ww_hammer]
-a_commonweapons = [aw_sprucebow, aw_longbow, aw_dioritebow, aw_ivy, aw_breeze]
-m_commonweapons = [mw_birchstick, mw_scarecrow, mw_candlestick, mw_elderwand, mw_flameburst]
-t_commonweapons = [tw_brassknuckle, tw_javelin, tw_spear, tw_cyclops, tw_scythe]
+w_commonweapons = [ww_steelsword, ww_claws, ww_bludgeon, ww_scimitar, ww_hammer, ww_sabre, ww_ida, ww_bolo, ww_hook, ww_mallet, ww_strongwood, ww_longknife, ww_dagger, ww_katana, ww_bonesword]
+a_commonweapons = [aw_sprucebow, aw_longbow, aw_dioritebow, aw_ivy, aw_breeze, aw_sharpshooter, aw_crossbow, aw_pocketbow, aw_recurve, aw_hellburner, aw_skullbreaker, aw_tridentarrow, aw_meet, aw_knife, aw_barrager]
+m_commonweapons = [mw_birchstick, mw_scarecrow, mw_candlestick, mw_grotti, mw_flameburst, mw_thunderlord, mw_mercy, mw_icestorm, mw_enchantsword, mw_void, mw_silverlance, mw_runicbook, mw_skystaff, mw_strength, mw_tearbringer]
+t_commonweapons = [tw_brassknuckle, tw_javelin, tw_spear, tw_cyclops, tw_scythe, tw_lance, tw_bluepike, tw_tribute, tw_trident, tw_bloodspear, tw_harpoon, tw_forkspear, tw_heavymace, tw_deathseeker, tw_staff]
 
-w_rareweapons = [ww_mallet, ww_mandibles, ww_gladius, ww_halberd, ww_doubleaxe]
-a_rareweapons = [aw_sharpshooter, aw_ivory, aw_thunderbolt, aw_trentbow, aw_prizedbow]
+w_rareweapons = [ww_butterfly, ww_mandibles, ww_gladius, ww_halberd, ww_doubleaxe]
+a_rareweapons = [aw_ivory, aw_threebow, aw_trentbow, aw_prizedbow]
 m_rareweapons = [mw_earthliving, mw_ironstaff, mw_cane, mw_harp, mw_arcanebolt]
 t_rareweapons = [tw_bullseye, tw_diorite, tw_blacksmith, tw_undying, tw_lion]
 
