@@ -2588,6 +2588,845 @@ def warriorgame():
     input("A week has passed.")
     everydaylifeW()
 
+def everydaylifeA():
+    global Apop
+    global Aresources
+    global Ahappy
+    global Amilitary
+    global krikor
+    
+    event1=random.randint(0,9)
+    event2=random.randint (0,9)
+    event3=random.randint(0,9)
+    event4=random.randint (0,9)
+    event5=random.randint(0,1)
+    event6=random.randint (0,9)
+    event7=random.randint (0,19)
+    event8=random.randint (0,19)
+    event9=random.randint(0,9)
+    event10=random.randint (0,19)
+    event11=random.randint(0,19)
+    event12=random.randint (0,9)
+
+    Jahestirrsacrifice1=False
+    Jahestirrsacrifice2=False
+    Jahestirrsacrifice3=False
+    Jahestirrsacrifice4=False
+    Jahestirrsacrifice5=False
+    Arasacrifice1=False
+    Arasacrifice2=False
+    Arasacrifice3=False
+    Arasacrifice4=False
+    Arasacrifice5=False
+    Esmyausacrifice1=False
+    Esmyausacrifice2=False
+    Esmyausacrifice3=False
+    Esmyausacrifice4=False
+    Esmyausacrifice5=False
+    Umisirsacrifice1=False
+    Umisirsacrifice2=False
+    Umisirsacrifice3=False
+    Umisirsacrifice4=False
+    Umisirsacrifice5=False
+    Trillinisacrifice1=False
+    Trillinisacrifice2=False
+    Trillinisacrifice3=False
+    Trillinisacrifice4=False
+    Trillinisacrifice5=False
+    Lenicarasacrifice1=False
+    Lenicarasacrifice2=False
+    Lenicarasacrifice3=False
+    Lenicarasacrifice4=False
+    Lenicarasacrifice5=False
+    Goaersacrifice1=False
+    Goaersacrifice2=False
+    Goaersacrifice3=False
+    Goaersacrifice4=False
+    Goaersacrifice5=False
+
+    if event1==0 or event1==1 or event1==2 or event1==3 or event1==4 or event1==5:
+        input("You must sacrifice to Jahestirr this week, god of the harvest.")
+        Jahestirrsacrifice1=True
+    else:
+        input
+
+    if event2==0 or event2==1 or event2==2 or event2==3:
+        input("You must sacrifice to Ara this week, goddess of magic and love.")
+        Arasacrifice1=True
+    else:
+        input
+
+    if event3==0 or event3==1:
+        input("You must sacrifice to Esmyau this week, goddess of peace.")
+        Esmyausacrifice1=True
+    else:
+        input
+
+    if event4==0:
+        input("You must sacrifice to Umisir this week, god of happiness.")
+        Umisirsacrifice1=True
+    else:
+        input
+
+    if event5==0 or event5==1:
+        input("You must sacrifice to Trillini this week, king of the Gods.")
+        Trillinisacrifice1=True
+    else:
+        input
+
+    if event6==0 or event6==1 or event6==2:
+        input("You must sacrifice to Lenicara and Goaer this week, gods of luck and war.")
+        Lenicarasacrifice1=True
+        Goaersacrifice1=True
+    else:
+        input
+
+    if event7==0:
+        Apop=round(Apop*0.96)
+        print("There was a bad flood this week. You have lost 4% of your population. Your current population is", Apop, ".")
+    else:
+        input
+
+
+    if event8==0:
+        Apop=round(Apop*0.92)
+        print("There was a big fire this week. You have lost 8% of your population. Your current population is", Apop, ".")
+    else:
+        input
+
+    if event9==0:
+        input("There was a drought this week.")
+    elif event9==1:
+        input("There was good rainfall this week. You must sacrifice to Lenicara.")
+        Lenicarasacrifice2=True
+    else:
+        input
+
+    if event10==0 or event10==1 or event10==2:
+        input("There was a bad harvest this week.")
+    elif event10==3 or event10==4 or event10==5 or event10==6:
+        input("There was a good harvest this week. You must sacrifice to Jahestirr.")
+        Jahestirrsacrifice2=True
+    else:
+        input
+
+    if event11==0 or event11==1 or event11==2:
+        input("There was a wedding this week. You must sacrifice to Ara.")
+        Arasacrifice2=True
+    else:
+        input
+
+    if event12==0 or event12==1 or event12==2 or event12==3 or event12==4 or event12==5 or event12==6 or event12==7:
+        input("The free trader has come to visit. ")
+        freetraderA()
+    else:
+        input
+
+
+    choicesacrificeJ=input("Do you want to sacrifice to Jahestirr? Yes or no?")
+    if choicesacrificeJ.lower()=="yes" or choicesacrificeJ.lower()=="y":
+        print("You shall sacrifice to Jahestirr.")
+        choicesacrificeJamount=int(input("How many times would you like to sacrifice to Jahestirr?"))
+        if choicesacrificeJamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeJamount==0:
+            print("You changed your mind and decided not to sacrifice to Jahestirr.")
+            input()
+        elif choicesacrificeJamount==1:
+            print("You gave one sacrifice to Jahestirr.")
+            Jahestirrsacrifice1=False
+            input()
+            print("The sacrifice to Jahestirr cost you", Jsacriprice*1, "Krikor." )
+            krikor=krikor-(Jsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==2:
+            print("You gave two sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*2, "Krikor." )
+            krikor=krikor-(Jsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==3:
+            print("You gave three sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*3, "Krikor." )
+            krikor=krikor-(Jsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==4:
+            print("You gave four sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            Jahestirrsacrifice4=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*4, "Krikor." )
+            krikor=krikor-(Jsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==5:
+            print("You gave five sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            Jahestirrsacrifice4=False
+            Jahestirrsacrifice5=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*5, "Krikor." )
+            krikor=krikor-(Jsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount>5:
+            print("Jahestirr doesnt want that many sacrifices, so instead, you just gave him 5.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            Jahestirrsacrifice4=False
+            Jahestirrsacrifice5=False
+            input()
+            krikor=krikor-(Jsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Jahestirr.")
+        input()
+
+        
+    choicesacrificeA=input("Do you want to sacrifice to Ara? Yes or no?")
+    if choicesacrificeA.lower()=="yes" or choicesacrificeA.lower()=="y":
+        print("You shall sacrifice to Ara.")
+        choicesacrificeAamount=int(input("How many times would you like to sacrifice to Ara?"))
+        if choicesacrificeAamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeAamount==0:
+            print("You changed your mind and decided not to sacrifice to Ara.")
+            input()
+        elif choicesacrificeAamount==1:
+            print("You gave one sacrifice to Ara.")
+            Arasacrifice1=False
+            input()
+            print("The sacrifice to Ara cost you", Asacriprice*1, "Krikor." )
+            krikor=krikor-(Asacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==2:
+            print("You gave two sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*2, "Krikor." )
+            krikor=krikor-(Asacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==3:
+            print("You gave three sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*3, "Krikor." )
+            krikor=krikor-(Asacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==4:
+            print("You gave four sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            Arasacrifice4=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*4, "Krikor." )
+            krikor=krikor-(Asacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==5:
+            print("You gave five sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            Arasacrifice4=False
+            Arasacrifice5=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*5, "Krikor." )
+            krikor=krikor-(Asacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount>5:
+            print("Ara doesnt want that many sacrifices, so instead, you just gave her 5.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            Arasacrifice4=False
+            Arasacrifice5=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*5, "Krikor." )
+            krikor=krikor-(Asacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Ara.")
+        input()
+
+
+    choicesacrificeE=input("Do you want to sacrifice to Esmyau? Yes or no?")
+    if choicesacrificeE.lower()=="yes" or choicesacrificeE.lower()=="y":
+        print("You shall sacrifice to Esmyau.")
+        choicesacrificeEamount=int(input("How many times would you like to sacrifice to Esmyau?"))
+        if choicesacrificeEamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeEamount==0:
+            print("You changed your mind and decided not to sacrifice to Esmyau.")
+            input()
+        elif choicesacrificeEamount==1:
+            print("You gave one sacrifice to Esmyau.")
+            Esmyausacrifice1=False
+            input()
+            print("The sacrifice to Esmyau cost you", Esacriprice*1, "Krikor." )
+            krikor=krikor-(Esacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==2:
+            print("You gave two sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*2, "Krikor." )
+            krikor=krikor-(Esacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==3:
+            print("You gave three sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*3, "Krikor." )
+            krikor=krikor-(Esacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==4:
+            print("You gave four sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            Esmyausacrifice4=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*4, "Krikor." )
+            krikor=krikor-(Esacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==5:
+            print("You gave five sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            Esmyausacrifice4=False
+            Esmyausacrifice5=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*5, "Krikor." )
+            krikor=krikor-(Esacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount>5:
+            print("Esmyau doesnt want that many sacrifices, so instead, you just gave him 5.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            Esmyausacrifice4=False
+            Esmyausacrifice5=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*5, "Krikor." )
+            krikor=krikor-(Esacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Esmyau.")
+        input()
+
+            
+    choicesacrificeU=input("Do you want to sacrifice to Umisir? Yes or no?")
+    if choicesacrificeU.lower()=="yes" or choicesacrificeU.lower()=="y":
+        print("You shall sacrifice to Umisir.")
+        choicesacrificeUamount=int(input("How many times would you like to sacrifice to Umisir?"))
+        if choicesacrificeUamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeUamount==0:
+            print("You changed your mind and decided not to sacrifice to Umisir.")
+            input()
+        elif choicesacrificeUamount==1:
+            print("You gave one sacrifice to Umisir.")
+            Umisirsacrifice1=False
+            input()
+            print("The sacrifice to Umisir cost you", Usacriprice*1, "Krikor." )
+            krikor=krikor-(Usacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==2:
+            print("You gave two sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*2, "Krikor." )
+            krikor=krikor-(Usacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==3:
+            print("You gave three sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*3, "Krikor." )
+            krikor=krikor-(Usacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==4:
+            print("You gave four sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            Umisirsacrifice4=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*4, "Krikor." )
+            krikor=krikor-(Usacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==5:
+            print("You gave five sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            Umisirsacrifice4=False
+            Umisirsacrifice5=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*5, "Krikor." )
+            krikor=krikor-(Usacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount>5:
+            print("Umisir doesnt want that many sacrifices, so instead, you just gave him 5.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            Umisirsacrifice4=False
+            Umisirsacrifice5=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*5, "Krikor." )
+            krikor=krikor-(Usacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Umisir.")
+        input()
+
+        
+    choicesacrificeT=input("Do you want to sacrifice to Trillini? Yes or no?")
+    if choicesacrificeT.lower()=="yes" or choicesacrificeT.lower()=="y":
+        print("You shall sacrifice to Trillini.")
+        choicesacrificeTamount=int(input("How many times would you like to sacrifice to Trillini?"))
+        if choicesacrificeTamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeTamount==0:
+            print("You changed your mind and decided not to sacrifice to Trillini.")
+            input()
+        elif choicesacrificeTamount==1:
+            print("You gave one sacrifice to Trillini.")
+            input()
+            print("The sacrifice to Trillini cost you", Tsacriprice*1, "Krikor." )
+            Trillinisacrifice1=False
+            krikor=krikor-(Tsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==2:
+            print("You gave two sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*2, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            krikor=krikor-(Tsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==3:
+            print("You gave three sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*3, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            krikor=krikor-(Tsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==4:
+            print("You gave four sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*4, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            Trillinisacrifice4=False
+            krikor=krikor-(Tsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==5:
+            print("You gave five sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*5, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            Trillinisacrifice4=False
+            Trillinisacrifice5=False
+            krikor=krikor-(Tsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount>5:
+            print("Trillini doesnt want that many sacrifices, so instead, you just gave him 5.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*5, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            Trillinisacrifice4=False
+            Trillinisacrifice5=False
+            krikor=krikor-(Tsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        else:
+            print("You shall not sacrifice to Trillini.")
+            input()
+
+            
+    choicesacrificeL=input("Do you want to sacrifice to Lenicara? Yes or no?")
+    if choicesacrificeL.lower()=="yes" or choicesacrificeL.lower()=="y":
+        print("You shall sacrifice to Lenicara.")
+        choicesacrificeLamount=int(input("How many times would you like to sacrifice to Lenicara?"))
+        if choicesacrificeLamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeLamount==0:
+            print("You changed your mind and decided not to sacrifice to Lenicara.")
+            input()
+        elif choicesacrificeLamount==1:
+            print("You gave one sacrifice to Lenicara.")
+            input()
+            print("The sacrifice to Lenicara cost you", Lsacriprice*1, "Krikor." )
+            Lenicarasacrifice1=False
+            krikor=krikor-(Lsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==2:
+            print("You gave two sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*2, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            krikor=krikor-(Lsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==3:
+            print("You gave three sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*3, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            krikor=krikor-(Lsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==4:
+            print("You gave four sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*4, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            Lenicarasacrifice4=False
+            krikor=krikor-(Lsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==5:
+            print("You gave five sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*5, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            Lenicarasacrifice4=False
+            Lenicarasacrifice5=False
+            krikor=krikor-(Lsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount>5:
+            print("Lenicara doesnt want that many sacrifices, so instead, you just gave him 5.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*5, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            Lenicarasacrifice4=False
+            Lenicarasacrifice5=False
+            krikor=krikor-(Lsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Lenicara.")
+        input()
+
+            
+    choicesacrificeG=input("Do you want to sacrifice to Goaer? Yes or no?")
+    if choicesacrificeG.lower()=="yes" or choicesacrificeG.lower()=="y":
+        print("You shall sacrifice to Goaer.")
+        choicesacrificeGamount=int(input("How many times would you like to sacrifice to Goaer?"))
+        if choicesacrificeGamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeGamount==0:
+            print("You changed your mind and decided not to sacrifice to Goaer.")
+            input()
+        elif choicesacrificeGamount==1:
+            print("You gave one sacrifice to Goaer.")
+            input()
+            print("The sacrifice to Goaer cost you", Gsacriprice*1, "Krikor." )
+            Goaersacrifice1=False
+            krikor=krikor-(Gsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==2:
+            print("You gave two sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*2, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            krikor=krikor-(Gsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==3:
+            print("You gave three sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*3, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            krikor=krikor-(Gsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==4:
+            print("You gave four sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*4, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            Goaersacrifice4=False
+            krikor=krikor-(Gsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==5:
+            print("You gave five sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*5, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            Goaersacrifice4=False
+            Goaersacrifice5=False
+            krikor=krikor-(Gsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount>5:
+            print("Goaer doesnt want that many sacrifices, so instead, you just gave him 5.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*5, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            Goaersacrifice4=False
+            Goaersacrifice5=False
+            krikor=krikor-(Gsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Goaer.")
+        input()
+
+
+
+    if Jahestirrsacrifice1==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Aresources=Aresources-10
+        Ahappy=Ahappy-3
+    if Jahestirrsacrifice2==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Aresources=Aresources-10
+        Ahappy=Ahappy-3
+    if Jahestirrsacrifice3==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Aresources=Aresources-10
+        Ahappy=Ahappy-3
+    if Jahestirrsacrifice4==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Aresources=Aresources-10
+        Ahappy=Ahappy-3
+    if Jahestirrsacrifice5==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Aresources=Aresources-10
+        Ahappy=Ahappy-3
+    if Arasacrifice1==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy.")
+        Ahappy=Ahappy-20
+    if Arasacrifice2==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy.")
+        Ahappy=Ahappy-20
+    if Arasacrifice3==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy.")
+        Ahappy=Ahappy-20
+    if Arasacrifice4==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy.")
+        Ahappy=Ahappy-20
+    if Arasacrifice5==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy.")
+        Ahappy=Ahappy-20
+    if Esmyausacrifice1==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Apop=Apop-1
+        Ahappy=Ahappy-10
+    if Esmyausacrifice2==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Apop=Apop-1
+        Ahappy=Ahappy-10
+    if Esmyausacrifice3==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Apop=Apop-1
+        Ahappy=Ahappy-10
+    if Esmyausacrifice4==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Apop=Apop-1
+        Ahappy=Ahappy-10
+    if Esmyausacrifice5==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Apop=Apop-1
+        Ahappy=Ahappy-10
+    if Umisirsacrifice1==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Ahappy=Ahappy-60
+    if Umisirsacrifice2==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Ahappy=Ahappy-60
+    if Umisirsacrifice3==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Ahappy=Ahappy-60
+    if Umisirsacrifice4==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Ahappy=Ahappy-60
+    if Umisirsacrifice5==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Ahappy=Ahappy-60
+    if Trillinisacrifice1==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Apop=Apop-random.randint(100,150)
+    if Trillinisacrifice2==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Apop=Apop-random.randint(100,150)
+    if Trillinisacrifice3==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Apop=Apop-random.randint(100,150)
+    if Trillinisacrifice4==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Apop=Apop-random.randint(100,150)
+    if Trillinisacrifice5==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Apop=Apop-random.randint(100,150)
+    if Lenicarasacrifice1==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Apop=Apop-10
+        Ahappy=Ahappy-10
+    if Lenicarasacrifice2==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Apop=Apop-10
+        Ahappy=Ahappy-10
+    if Lenicarasacrifice3==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Apop=Apop-10
+        Ahappy=Ahappy-10
+    if Lenicarasacrifice4==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Apop=Apop-10
+        Ahappy=Ahappy-10
+    if Lenicarasacrifice5==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Apop=Apop-10
+        Ahappy=Ahappy-10
+    if Goaersacrifice1==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Amilitary=Amilitary-4
+    if Goaersacrifice2==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Amilitary=Amilitary-4
+    if Goaersacrifice3==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Amilitary=Amilitary-4
+    if Goaersacrifice4==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Amilitary=Amilitary-4
+    if Goaersacrifice5==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Amilitary=Amilitary-4
+    print("")
+    print("")
+    
 def archergame():
     archerinitialproblem()
     everydaylifeA()
