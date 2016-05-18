@@ -461,10 +461,10 @@ def trentinitialproblem():
     tcrisis=random.randint(1,2)
     if tcrisis==1:
         print("You have recieved word that a raging forest fire has burned x Trents to death")
-        tpop-tcrisis1=tpop
+        tpop=tpop-tcrisis1
     if tcrisis==2:
         print ("You have recieved word that a rabid swarm of insects have killed x number of Trents")
-        tpop-tcrisis2=tpop
+        tpop=tpop-tcrisis2
 
 def mageinitialproblem():
     #mip
@@ -571,36 +571,168 @@ def archerinitialproblem():
         print("Your clan's food levels have gone down from", OrigAfood, "to", round(Afood))
     
     #the program for the salesman who visits in everyday life - can be edited for your own needs later, this one is specifically for Mages
-    def freetraderM():
-        print("Hello my dear friend!")
-        input()
-        print("What do you want to buy today?")
-        input()
-        #Note: The spaces here are so that on my computer with my settings, these are centered. I'll work on a way to have that done better for the future
-        print("""Options:
-                                                                Food                                                       Weapons
-    
-                                                                                             Materials""")
-        freetradein=input("")
-        freetradein = freetradein.lower()
-        if freetradein == "food":
-            print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
-            input()
-            print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
-            input()
-        elif freetradein == "weapons":
-            print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
-            input()
-            print("And don't worry, all the correct sacrifices have been made. Your weapons won't turn on you in battle.")
-            input()
-        elif freetradein == "materials":
-            print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
-            input()
-            print("They might not be as cheap as those from your other friends, but I come round many times more often!")
-            input()
-            print("Its only fair you buy from me instead.")
-            input()
 
+
+def freetraderW():
+    pricefood=random.randint(20,30)
+    woodprice=random.randint(250,500)
+    coalprice=random.randint(500,750)
+    ironprice=random.randint(500,1000)
+    stoneprice=random.randint(100,500)
+    epicweaponluck=random.randint(1,50)
+    print("Hello my dear friend!")
+    input()
+    input("Today I have the following:")
+    input("Food")
+    input("Weapons")
+    input("Materials")
+    input("")
+    freetradein=input("What would you like to buy? If you don't wish to purchase anything type none.")
+    freetradein = freetradein.lower()
+    if freetradein == "food":
+        print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
+        input()
+        print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
+        input()
+        foodtradeloop = True
+        while foodtradeloop == True:
+            group_of_food = {"Steak", "Cooked Porkchop", "Jacket Potato", "Cooked Fish", "Bread", "Cooked Chicken"}
+            num_to_select = 3
+            list_of_random_food = random.sample(group_of_food, num_to_select)
+            first_random_food = list_of_random_food[0]
+            second_random_food = list_of_random_food[1]
+            third_random_food = list_of_random_food[2]
+            print("Today's selection is", first_random_food,",",second_random_food, "as well as", third_random_food,".")
+            input()
+            typedfood=str(input("What would you like to purchase? Please note that I am case sensitive."))
+            if typedfood in {first_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {second_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {third_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            else:
+                print("")
+                input("I'm sorry. Unfortunately that is not a valid option. Please try again.")
+
+    elif freetradein == "weapons":
+        print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
+        input()
+        print("And don't worry, all the correct sacrifices have been made. Your weapons won't turn on you in battle.")
+        input()
+        weapontradeloop = True
+        while weapontradeloop == True:
+
+            group_of_common_wweapons = {"Steel Sword", "Claws", "Bludgeon", "Scimitar", "Hammer", "Liam"} #remove liam and add the 10 more weapons
+            num_to_select = 6
+            list_of_random_common_wweapons = random.sample(group_of_common_wweapons, num_to_select)
+            first_random_common_wweapon = list_of_random_common_wweapons[0]
+            second_random_common_wweapon = list_of_random_common_wweapons[1]
+            third_random_common_wweapon = list_of_random_common_wweapons[2]
+            fourth_random_common_wweapon = list_of_random_common_wweapons[3]
+            fifth_random_common_wweapon = list_of_random_common_wweapons[4]
+            sixth_random_common_wweapon = list_of_random_common_wweapons[5]
+
+            group_of_rare_wweapons = {"Mallet", "Mandibles", "Gladius", "Halberd", "Doubleaxe"}
+            num_to_select = 2
+            list_of_random_rare_wweapons = random.sample(group_of_rare_wweapons, num_to_select)
+            first_random_rare_wweapon = list_of_random_rare_wweapons[0]
+            second_random_rare_wweapon = list_of_random_rare_wweapons[1]
+
+            print("Lucky for you, I have quite the selection right now. For common weapons, I can offer a", first_random_common_wweapon,", a", second_random_common_wweapon,", a", third_random_common_wweapon,", a", fourth_random_common_wweapon,", a", fifth_random_common_wweapon," and a", sixth_random_common_wweapon,".")
+            input()
+            print("As for rare weapons, a", first_random_rare_wweapon," and a", second_random_rare_wweapon,".")
+            input()
+            weapontradeloop = False
+
+            def function(random_epic_wweapon):
+                if epicweaponluck == 7:
+                    group_of_epic_wweapons ={"Zweireaper", "Greatsword", "Gemcrusher", "Katana", "Lunar Relic"}
+                    num_to_select = 1
+                    list_of_random_epic_wweapons = random.sample(group_of_epic_wweapons, num_to_select)
+                    random_epic_wweapon = list_of_random_epic_wweapons[0]
+                    print("Oh my. What is this...looks like you're in luck today! It seems as if I have an epic weapon in stock - the", random_epic_wweapon,"!")
+                else:
+                    print("")
+                return random_epic_wweapon - 1
+            function(1)
+
+            typedweapon=str(input("Which weapon would you like to purchase? Please note that I am case sensitive."))
+            if typedweapon in {first_random_common_wweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {second_random_common_wweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {third_random_common_wweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {fourth_random_common_wweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {fifth_random_common_wweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {sixth_random_common_wweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {first_random_rare_wweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {second_random_rare_wweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                weapontradeloop = False
+            elif typedweapon in {random_epic_wweapon}:
+                print("Excellent. That will be", price3,"krikor.")
+                weapontradeloop = False
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+
+    elif freetradein == "materials":
+        print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
+        input()
+        print("They might not be as cheap as those from your other friends, but I come round many times more often!")
+        input()
+        print("Its only fair you buy from me instead.")
+        input()
+        print("I have a selection of Wood, Coal, Iron and Stone.")
+        input()
+        materialtradeloop = True
+        while materialtradeloop == True:
+            typedmaterial=str(input("What would you like to purchase?"))
+            if typedmaterial == "Wood" or typedmaterial == "wood":
+                print("Excellent. That will", woodprice,"be krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Coal" or typedmaterial == "coal":
+                print("Excellent. That will be", coalprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Iron" or typedmaterial == "iron":
+                print("Excellent. That will be", ironprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Stone" or typedmaterial == "stone":
+                print("Excellent. That will be", stoneprice,"krikor.")
+                materialtradeloop = False
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+            
+
+    elif freetradein=="none":
+        print("That's unfortunate. I hope we could do businesss sometime else.")
+        input()
+
+    else:
+        print("An error has occurered. Please try again.")
+        input()
+
+freetraderW()
+random_epic_wweapon()
+
+        
 def trentlife():
     #trentlife
     print("")
