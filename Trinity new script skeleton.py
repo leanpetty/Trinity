@@ -445,6 +445,13 @@ def intro():
 def trentinitialproblem():
     #tip
     print("")
+    tcrisis=random.randint(1,2)
+    if tcrisis==1:
+        print("You have recieved word that a raging forest fire has burned x Trents to death")
+        tpop-tcrisis1=tpop
+    if tcrisis==2:
+        print ("You have recieved word that a rabid swarm of insects have killed x number of Trents")
+        tpop-tcrisis2=tpop
 
 def mageinitialproblem():
     #mip
