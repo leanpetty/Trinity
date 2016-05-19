@@ -3451,8 +3451,55 @@ def archergame():
     everydaylifeA()
     input("A week has passed.")
     #major problem
+
+    print("You recieve news from a neighbouring Mages that the Mage Clan has invited us, the Archers, to participate in their annual Projectile Tournament.")
+    input("")
+    print("It is said that if you do decide to participate, you may become much richer if you win although there is a chance you might lose some money, troops and resources if you lose.")
+    input("")
+    archerparticipate=input("Would you like to participate? If so, it would cost 5000 krikor.")
+
+    if archerparticipate.lower()=="yes":
+        input("You have decided to enter the event. You paid 5000 krikor as an entry fee to the mages.")
+        krikor=krikor-5000
+        print("You now have", krikor, "krikor.")
+        input()
+        print("The tournament will take place in a week and you will recieve the results then.")
+    else:
+        input("You have decided not to participate. There has been no change to your population, resources or krikor.")
+
+    tournamentwinA=random.randint(0,1)
     everydaylifeA()
     input("A week has passed.")
+    if tournamentwinA == 0:
+        print("The results of the Projectile Tournament have arrived from the mages!")
+        input()
+        print("The results are... in third place...")
+        input("The trents!")
+        print("In second place we have...")
+        input("The mages!")
+        print("And in first place...")
+        input("The archers!")
+        print("Congratulations on winning this years Projectile Tournament!")
+        input()
+        print("You have gained 7500 krikor, 50 resources and 5 troops as gifts from the other clans for winning!")
+        krikor=krikor+7500
+        Apop=Apop+5
+        Aresources=Aresources+50
+        print("You currently have a poulation of", Apop, ", ", Aresources, " resources and", krikor, "krikor.")
+
+    else:
+        print("The results of the Projectile Tournament have arrived from the mages!")
+        input()
+        print("The results are... in third place...")
+        input("The trents!")
+        print("In second place we have...")
+        input("The archers!")
+        print("And in first place...")
+        input("The mages!")
+        print("Unfortunately since you have lost the tournament, you haven't gained any krikor, resources or troops.")
+        input()
+        print("There have been no changes to your population, resources or krikor.")
+    
     everydaylifeA()
     input("A week has passed.")
     everydaylifeA()
@@ -3471,6 +3518,8 @@ def archergame():
     everydaylifeA()
     input("A week has passed.")
     everydaylifeA()
+
+
     
 
 def clangame():
