@@ -521,18 +521,21 @@ def intro():
     joinclan()
 
 def trentinitialproblem():
+    tpop=1000
     #tip
     print("")
-    tcrisis=random.randint(1,2)
+    tcrisis=random.randint(0,2)
     if tcrisis==1:
         print("You wake up the next morning to find a letter on your bedside table")
         input()
         tcrisis1=random.randint(100,500)
-        print("Upon opening the letter you find a note saying that a raging forest fire has burned "+tcrisis1+" Trents to death")
+        print("Upon opening the letter you find a note saying that a raging forest fire has burned "+str(tcrisis1)+" Trents to death")
         tpop=tpop-tcrisis1
-    if tcrisis==2:
+    else:
+        print("You wake up the next morning to find a letter on your bedside table")
+        input()
         tcrisis2=random.randint(100,500)
-        print ("You have recieved word that a rabid swarm of insects have killed x number of Trents")
+        print ("Upon opening the letter you find that a rabid swarm of insects have killed "+str(tcrisis2)+" Trents")
         tpop=tpop-tcrisis2
 
 def mageinitialproblem():
