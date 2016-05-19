@@ -2562,7 +2562,22 @@ def warriorgame():
     input("A week has passed.")
     everydaylifeW()
     input("A week has passed.")
-    #major problem
+   
+    print("A traveller visited yesterday and, due to the fact that you sheltered him, he taught you how to mine deeper in order to get more minerals.")
+    input("")
+    print("By digging deeper you may become richer and gain more resources however some people may die of exhaustion.")
+    input("")
+    minedeeper=input("Do you want to mine deeper?")
+
+    if minedeeper.lower()=="yes":
+        input("You have decided to mine deeper. You have gained 1000 krikor, 60 resources and lost 6 men.")
+        krikor=krikor+1000
+        Wpop=Wpop-6
+        Wresources=Wresources+60
+        print("You currently have a poulation of", Wpop, ", ", Wresources, " resources and", krikor, "krikor.")
+        input("")
+    else:
+        input("You have decided not to mine deeper. There has been no change to your population, resources or krikor.")
     everydaylifeW()
     input("A week has passed.")
     everydaylifeW()
