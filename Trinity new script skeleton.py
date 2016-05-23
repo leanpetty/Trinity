@@ -302,43 +302,46 @@ def characterchoice():
             else:
                 cnameloop=False
             #in this case, 'char' means character, not charmaine
-            print("Welcome to the game,", charname)
+        print("Welcome to the game,", charname)
+        print("")
+        print("")
+        chargenderinput=input("Are you a boy or a girl?")
+        print("")
+        global chargender
+        if chargenderinput.lower() == "boy" or chargenderinput.lower() == "male" or chargenderinput.lower() == "man":
+            chargender="boy"
+            print("You are a boy.")
             print("")
+            input("Press 'enter' to begin the game.")
+            cchoiceloop=False
+        elif chargenderinput.lower() == "girl" or chargenderinput.lower() == "female" or chargenderinput.lower() == "woman":
+            chargender="girl"
+            print("You are a girl.")
             print("")
-            chargenderinput=input("Are you a boy or a girl?")
+            input("Press 'enter' to begin the game.")
+            cchoiceloop=False
+        elif chargenderinput.lower() == "i don't know" or chargenderinput.lower() == "i dont know" or chargenderinput.lower() == "idk":
+            print("Then we'll decide for you.")
             print("")
-            global chargender
-            if chargenderinput.lower() == "boy" or chargenderinput.lower() == "male" or chargenderinput.lower() == "man":
-                chargender="boy"
-                print("You are a boy.")
-                print("")
-                input("Press 'enter' to begin the game.")
-                cchoiceloop=False
-            elif chargenderinput.lower() == "girl" or chargenderinput.lower() == "female" or chargenderinput.lower() == "woman":
+            cnameidk=random.randint(0,1)
+            if cnameidk == 0:
                 chargender="girl"
-                print("You are a girl.")
+                print("You are a girl")
                 print("")
                 input("Press 'enter' to begin the game.")
                 cchoiceloop=False
-            elif chargenderinput.lower() == "i don't know" or chargenderinput.lower() == "i dont know" or chargenderinput.lower() == "idk":
-                print("Then we'll decide for you.")
+            elif cnameidk == 1:
+                chargender="boy"
+                print("You are a boy")
                 print("")
-                cnameidk=random.randint(0,1)
-                if cnameidk == 0:
-                    chargender="girl"
-                    print("You are a girl")
-                    print("")
-                    input("Press 'enter' to begin the game.")
-                    cchoiceloop=False
-                elif cnameidk == 1:
-                    chargender="boy"
-                    print("You are a boy")
-                    print("")
-                    input("Press 'enter' to begin the game.")
-                    cchoiceloop=False
-                else:
-                    print("That was not one of the options. Start again.")
-                    print("")
+                input("Press 'enter' to begin the game.")
+                cchoiceloop=False
+            else:
+                print("That was not one of the options. Start again.")
+                print("")
+        else:
+            print("That was not an option, start again.")
+            print("")
 
 
 def introspeech():
