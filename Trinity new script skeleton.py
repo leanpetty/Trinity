@@ -5342,4 +5342,7 @@ def openinggame():
     elif startgaame=="presets":
         presets()
         trinity()
+    else:
+        print("You didn't input anything. The game will start anyway.")
+        trinity()
 openinggame()
