@@ -5306,6 +5306,7 @@ def openinggame():
         trinity()
     elif startgame=="rules":
         rules()
+        trinity()
     elif startgaame=="presets":
         presets()
         trinity()
