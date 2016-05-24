@@ -33,6 +33,20 @@ Tsacriprice=55
 Lsacriprice=65
 Gsacriprice=100
 
+global pricefood
+global woodprice 
+global coalprice
+global ironprice
+global stoneprice
+global epicweaponluck
+
+pricefood=random.randint(20,30)
+woodprice=random.randint(250,500)
+coalprice=random.randint(500,750)
+ironprice=random.randint(500,1000)
+stoneprice=random.randint(100,500)
+epicweaponluck=random.randint(1,50)
+
 #M % defs
 Mmagic=100
 Mpop=random.randint(10000,20000)
@@ -287,6 +301,27 @@ yourweaponslist = []
 
 #other lists
 traderexclamationsjoyful = ["Terrific!", "Fantastic", "Splendid!", "Perfect!", "Wonderful!", "Amazing!", "Marvellous!", "Magnificent!", "Superb!", "Splendid!", "Super!", "Great!", "Smashing!", "Phenomenal!", "Sensational!", "Fabulous!", "Fantabulous!"]
+
+def presets():
+    print("To change the presets, you must first complete the game.")
+    presetcode=input("If you have completed the game, enter your 10-digit code here.")
+    if presetcode==1123581321:
+        print("You can now change the presets.")
+        #change this when game is complete
+        print("Unfortunately, the game hasn't been completed yet, so we know that if you are here, Its because you cheated.")
+        print("But you can have a second chance.")
+        input()
+        print("And a sneak peak of what will be here.")
+        print("Once you complete the game, you can change the presets, giving you a massive amount of people, popularity or others.")
+        input()
+        print("Or you could give yourself really low points, making the game more difficult.")
+        print("But as the game isnt finished, this feature isnt yet ready. When the game is complete, this will be too.")
+        input()
+        print("But now...")
+        input("Press enter to begin the game.")
+    else:
+        input("Incorrect. Press enter to begin the game normally.")
+
 
 def characterchoice():
     cchoiceloop=True
@@ -650,11 +685,347 @@ def archerinitialproblem():
 
 def freetraderT():
     print("")
+    pricefood=random.randint(20,30)
+    woodprice=random.randint(250,500)
+    coalprice=random.randint(500,750)
+    ironprice=random.randint(500,1000)
+    stoneprice=random.randint(100,500)
+    epicweaponluck=random.randint(1,50)
+    print("Hello my dear friend!")
+    input()
+    input("Today I have the following:")
+    input("Food")
+    input("Weapons")
+    input("Materials")
+    input("")
+    freetradein=input("What would you like to buy? If you don't wish to purchase anything type none.")
+    freetradein = freetradein.lower()
+    if freetradein == "food":
+        print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
+        input()
+        print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
+        input()
+        foodtradeloop = True
+        while foodtradeloop == True:
+            group_of_food = {"Steak", "Cooked Porkchop", "Jacket Potato", "Cooked Fish", "Bread", "Cooked Chicken"}
+            num_to_select = 3
+            list_of_random_food = random.sample(group_of_food, num_to_select)
+            first_random_food = list_of_random_food[0]
+            second_random_food = list_of_random_food[1]
+            third_random_food = list_of_random_food[2]
+            print("Today's selection is", first_random_food,",",second_random_food, "as well as", third_random_food,".")
+            input()
+            typedfood=str(input("What would you like to purchase? Please note that I am case sensitive."))
+            if typedfood in {first_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {second_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {third_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            else:
+                print("")
+                input("I'm sorry. Unfortunately that is not a valid option. Please try again.")
+
+    elif freetradein == "weapons":
+        print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
+        input()
+        print("And don't worry, all the correct sacrifices have been made. Your weapons won't turn on you in battle.")
+        input()
+        weapontradeloop = True
+        while weapontradeloop == True:
+
+            group_of_common_tweapons = {brassknuckle, javelin, spear, cyclops, scythe, lance, bluepike, tribute, trident, bloodspear, harpoon, tw_forkspear, heavymace, deathseeker, staff}
+            num_to_select = 6
+            list_of_random_common_tweapons = random.sample(group_of_common_tweapons, num_to_select)
+            first_random_common_tweapon = list_of_random_common_tweapons[0]
+            second_random_common_tweapon = list_of_random_common_tweapons[1]
+            third_random_common_tweapon = list_of_random_common_tweapons[2]
+            fourth_random_common_tweapon = list_of_random_common_tweapons[3]
+            fifth_random_common_tweapon = list_of_random_common_tweapons[4]
+            sixth_random_common_tweapon = list_of_random_common_tweapons[5]
+
+            group_of_rare_tweapons = {"Bullseye", "Diorite", "Blacksmith", "Undying", "Lion"}
+            num_to_select = 2
+            list_of_random_rare_tweapons = random.sample(group_of_rare_tweapons, num_to_select)
+            first_random_rare_wweapon = list_of_random_rare_tweapons[0]
+            second_random_rare_wweapon = list_of_random_rare_tweapons[1]
+
+            print("Lucky for you, I have quite the selection right now. For common weapons, I can offer a", first_random_common_tweapon,", a", second_random_common_tweapon,", a", third_random_common_tweapon,", a", fourth_random_common_tweapon,", a", fifth_random_common_tweapon," and a", sixth_random_common_tweapon,".")
+            input()
+            print("As for rare weapons, a", first_random_rare_tweapon," and a", second_random_rare_tweapon,".")
+            input()
+            weapontradeloop = False
+            
+            group_of_epic_tweapons ={"Warrior Infused Javevlin", "Tidebender's Spear", "Harwol", "Fierte", "Golden Frog Poison"}
+            num_to_select = 1
+            list_of_random_epic_tweapons = random.sample(group_of_epic_tweapons, num_to_select)
+            random_epic_aweapon = list_of_random_epic_tweapons[0]
+            if epicweaponluck == 7:
+                print("Oh my. What is this...looks like you're in luck today! It seems as if I have an epic weapon in stock - the", random_epic_tweapon,"!")
+            else:
+                print("")
+
+            typedweapon=str(input("Which weapon would you like to purchase? Please note that I am case sensitive."))
+            if typedweapon in {first_random_common_tweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {second_random_common_tweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {third_random_common_tweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {fourth_random_common_tweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {fifth_random_common_tweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {sixth_random_common_tweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {first_random_rare_tweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price2
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {second_random_rare_tweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price2
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {random_epic_weapon}:
+                print("Excellent. That will be", price3,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price3
+                print("You now have", krikor, "krikor.")
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+
+    elif freetradein == "materials":
+        print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
+        input()
+        print("They might not be as cheap as those from your other friends, but I come round many times more often!")
+        input()
+        print("Its only fair you buy from me instead.")
+        input()
+        print("I have a selection of Wood, Coal, Iron and Stone.")
+        input()
+        materialtradeloop = True
+        while materialtradeloop == True:
+            typedmaterial=str(input("What would you like to purchase?"))
+            if typedmaterial == "Wood" or typedmaterial == "wood":
+                print("Excellent. That will", woodprice,"be krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Coal" or typedmaterial == "coal":
+                print("Excellent. That will be", coalprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Iron" or typedmaterial == "iron":
+                print("Excellent. That will be", ironprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Stone" or typedmaterial == "stone":
+                print("Excellent. That will be", stoneprice,"krikor.")
+                materialtradeloop = False
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+            
+
+    elif freetradein=="none":
+        print("That's unfortunate. I hope we could do businesss sometime else.")
+        input()
+
+    else:
+        print("An error has occurered. Please try again.")
+        input()
 
 
 def freetraderM():
     print("")
+    pricefood=random.randint(20,30)
+    woodprice=random.randint(250,500)
+    coalprice=random.randint(500,750)
+    ironprice=random.randint(500,1000)
+    stoneprice=random.randint(100,500)
+    epicweaponluck=random.randint(1,50)
+    print("Hello my dear friend!")
+    input()
+    input("Today I have the following:")
+    input("Food")
+    input("Weapons")
+    input("Materials")
+    input("")
+    freetradein=input("What would you like to buy? If you don't wish to purchase anything type none.")
+    freetradein = freetradein.lower()
+    if freetradein == "food":
+        print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
+        input()
+        print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
+        input()
+        foodtradeloop = True
+        while foodtradeloop == True:
+            group_of_food = {"Steak", "Cooked Porkchop", "Jacket Potato", "Cooked Fish", "Bread", "Cooked Chicken"}
+            num_to_select = 3
+            list_of_random_food = random.sample(group_of_food, num_to_select)
+            first_random_food = list_of_random_food[0]
+            second_random_food = list_of_random_food[1]
+            third_random_food = list_of_random_food[2]
+            print("Today's selection is", first_random_food,",",second_random_food, "as well as", third_random_food,".")
+            input()
+            typedfood=str(input("What would you like to purchase? Please note that I am case sensitive."))
+            if typedfood in {first_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {second_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {third_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            else:
+                print("")
+                input("I'm sorry. Unfortunately that is not a valid option. Please try again.")
 
+    elif freetradein == "weapons":
+        print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
+        input()
+        print("And don't worry, all the correct sacrifices have been made. Your weapons won't turn on you in battle.")
+        input()
+        weapontradeloop = True
+        while weapontradeloop == True:
+            group_of_common_mweapons = {"Birch Stick", "Scarecrow", "Candlestick", "Elderwand", "Flameburst", "Thunderlord", "Merciful Killer", "Icestorm", "Enchanted Sword", "Void Staff", "Silver Lance", "Book of Runes", "Staff of the Sky", "Strength", "Tear Bringer"}
+            num_to_select = 6
+            list_of_random_common_mweapons = random.sample(group_of_common_mweapons, num_to_select)
+            first_random_common_mweapon = list_of_random_common_mweapons[0]
+            second_random_common_mweapon = list_of_random_common_mweapons[1]
+            third_random_common_mweapon = list_of_random_common_mweapons[2]
+            fourth_random_common_mweapon = list_of_random_common_mweapons[3]
+            fifth_random_common_mweapon = list_of_random_common_mweapons[4]
+            sixth_random_common_mweapon = list_of_random_common_mweapons[5]
+
+            group_of_rare_mweapons = {"Earthliving", "Iron Tipped Staff", "Wood Cane", "Petrified Harp", "Arcane Bolt"}
+            num_to_select = 2
+            list_of_random_rare_mweapons = random.sample(group_of_rare_mweapons, num_to_select)
+            first_random_rare_mweapon = list_of_random_rare_mweapons[0]
+            second_random_rare_mweapon = list_of_random_rare_mweapons[1]
+
+            print("Lucky for you, I have quite the selection right now. For common weapons, I can offer a", first_random_common_mweapon,", a", second_random_common_mweapon,", a", third_random_common_mweapon,", a", fourth_random_common_mweapon,", a", fifth_random_common_mweapon," and a", sixth_random_common_mweapon,".")
+            input()
+            print("As for rare weapons, a", first_random_rare_mweapon," and a", second_random_rare_mweapon,".")
+            input()
+            weapontradeloop = True
+            
+            group_of_epic_mweapons ={"Diablo", "Void Twig", "Ancient Wand", "Water Breath", "Liam Fart"}
+            num_to_select = 1
+            list_of_random_epic_mweapons = random.sample(group_of_epic_mweapons, num_to_select)
+            random_epic_mweapon = list_of_random_epic_mweapons[0]
+            if epicweaponluck == 7:
+                print("Oh my. What is this...looks like you're in luck today! It seems as if I have an epic weapon in stock - the", random_epic_mweapon,"!")
+            else:
+                print("")
+
+            typedweapon=str(input("Which weapon would you like to purchase? Please note that I am case sensitive."))
+            if typedweapon in {first_random_common_mweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {second_random_common_mweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {third_random_common_mweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {fourth_random_common_mweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {fifth_random_common_mweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {sixth_random_common_mweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price1
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {first_random_rare_mweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price2
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {second_random_rare_mweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price2
+                print("You now have", krikor, "krikor.")
+            elif typedweapon in {random_epic_mweapon}:
+                print("Excellent. That will be", price3,"krikor.")
+                weapontradeloop = False
+                krikor=krikor-price3
+                print("You now have", krikor, "krikor.")
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+
+    elif freetradein == "materials":
+        print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
+        input()
+        print("They might not be as cheap as those from your other friends, but I come round many times more often!")
+        input()
+        print("Its only fair you buy from me instead.")
+        input()
+        print("I have a selection of Wood, Coal, Iron and Stone.")
+        input()
+        materialtradeloop = True
+        while materialtradeloop == True:
+            typedmaterial=str(input("What would you like to purchase?"))
+            if typedmaterial == "Wood" or typedmaterial == "wood":
+                print("Excellent. That will", woodprice,"be krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Coal" or typedmaterial == "coal":
+                print("Excellent. That will be", coalprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Iron" or typedmaterial == "iron":
+                print("Excellent. That will be", ironprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Stone" or typedmaterial == "stone":
+                print("Excellent. That will be", stoneprice,"krikor.")
+                materialtradeloop = False
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+            
+
+    elif freetradein=="none":
+        print("That's unfortunate. I hope we could do businesss sometime else.")
+        input()
+
+    else:
+        print("An error has occurered. Please try again.")
+        input()
 
 def freetraderW():
     pricefood=random.randint(20,30)
@@ -663,8 +1034,7 @@ def freetraderW():
     ironprice=random.randint(500,1000)
     stoneprice=random.randint(100,500)
     epicweaponluck=random.randint(0,50)
-    
-    print("Hello my dear friend!")
+     print("Hello my dear friend!")
     input()
     input("Today I have the following:")
     input("Food")
@@ -742,30 +1112,48 @@ def freetraderW():
                 if typedweapon.lower() in {first_random_common_wweapon}:
                     print("Excellent. That will be", price1,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price1
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {second_random_common_wweapon}:
                     print("Excellent. That will be", price1,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price1
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {third_random_common_wweapon}:
                     print("Excellent. That will be", price1,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price1
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {fourth_random_common_wweapon}:
                     print("Excellent. That will be", price1,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price1
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {fifth_random_common_wweapon}:
                     print("Excellent. That will be", price1,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price1
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {sixth_random_common_wweapon}:
                     print("Excellent. That will be", price1,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price1
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {first_random_rare_wweapon}:
                     print("Excellent. That will be", price2,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price2
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {second_random_rare_wweapon}:
                     print("Excellent. That will be", price2,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price2
+                    print("You now have", krikor, "krikor.")
                 elif typedweapon.lower() in {random_epic_wweapon}:
                     print("Excellent. That will be", price3,"krikor.")
                     weapontradeloop = False
+                    krikor=krikor-price3
+                    print("You now have", krikor, "krikor.")
                 else:
                     print("")
                     print("I'm sorry but that is not a valid option. Please try again.")
@@ -803,13 +1191,986 @@ def freetraderW():
     else:
         print("An error has occurered. Please try again.")
         input()
-
-
+    
 def freetraderA():
     print("")
+    print("Hello my dear friend!")
+    input()
+    input("Today I have the following:")
+    input("Food")
+    input("Weapons")
+    input("Materials")
+    input("")
+    freetradein=input("What would you like to buy? If you don't wish to purchase anything type none.")
+    freetradein = freetradein.lower()
+    if freetradein == "food":
+        print(random.choice(traderexclamationsjoyful),"You will find that my selection of cusine is far above that of anyone else on this island.")
+        input()
+        print("I'll have them shipped directly to the doorsteps of your citizens - for a fair price, of course.")
+        input()
+        foodtradeloop = True
+        while foodtradeloop == True:
+            group_of_food = {"Steak", "Cooked Porkchop", "Jacket Potato", "Cooked Fish", "Bread", "Cooked Chicken"}
+            num_to_select = 3
+            list_of_random_food = random.sample(group_of_food, num_to_select)
+            first_random_food = list_of_random_food[0]
+            second_random_food = list_of_random_food[1]
+            third_random_food = list_of_random_food[2]
+            print("Today's selection is", first_random_food,",",second_random_food, "as well as", third_random_food,".")
+            input()
+            typedfood=str(input("What would you like to purchase? Please note that I am case sensitive."))
+            if typedfood in {first_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {second_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            elif typedfood in {third_random_food}:
+                print("Excellent! That'll be", pricefood,"krikor.")
+                foodtradeloop=False
+            else:
+                print("")
+                input("I'm sorry. Unfortunately that is not a valid option. Please try again.")
 
+    elif freetradein == "weapons":
+        print(random.choice(traderexclamationsjoyful),"I guarantee that utterly destroying your enemies with these weapons will be much more fun than with any others.")
+        input()
+        print("And don't worry, all the correct sacrifices have been made. Your weapons won't turn on you in battle.")
+        input()
+        weapontradeloop = True
+        while weapontradeloop == True:
+
+            group_of_common_aweapons = {"Spruce Bow", "Oak Longbow", "Refined Diorite Bow", "Ivy", "Breeze", "Liam"} #remove liam and add the 10 more weapons
+            num_to_select = 6
+            list_of_random_common_aweapons = random.sample(group_of_common_aweapons, num_to_select)
+            first_random_common_aweapon = list_of_random_common_aweapons[0]
+            second_random_common_aweapon = list_of_random_common_aweapons[1]
+            third_random_common_aweapon = list_of_random_common_aweapons[2]
+            fourth_random_common_aweapon = list_of_random_common_aweapons[3]
+            fifth_random_common_aweapon = list_of_random_common_aweapons[4]
+            sixth_random_common_aweapon = list_of_random_common_aweapons[5]
+
+            group_of_rare_aweapons = {"Sharpshooter's Arch", "Petrified Ivory Bow", "Thunderbolt", "Trentbow", "Prizedbow"}
+            num_to_select = 2
+            list_of_random_rare_aweapons = random.sample(group_of_rare_aweapons, num_to_select)
+            first_random_rare_aweapon = list_of_random_rare_aweapons[0]
+            second_random_rare_aweapon = list_of_random_rare_aweapons[1]
+
+            print("Lucky for you, I have quite the selection right now. For common weapons, I can offer a", first_random_common_aweapon,", a", second_random_common_aweapon,", a", third_random_common_aweapon,", a", fourth_random_common_aweapon,", a", fifth_random_common_aweapon," and a", sixth_random_common_aweapon,".")
+            input()
+            print("As for rare weapons, a", first_random_rare_aweapon," and a", second_random_rare_aweapon,".")
+            input()
+            weapontradeloop = True
+            
+            group_of_epic_aweapons ={"Sharpshooter's Ignis", "Az", "Iron String", "Flare's Crest", "Clustershock"}
+            num_to_select = 1
+            list_of_random_epic_aweapons = random.sample(group_of_epic_aweapons, num_to_select)
+            random_epic_aweapon = list_of_random_epic_aweapons[0]
+            if epicweaponluck == 7:
+                print("Oh my. What is this...looks like you're in luck today! It seems as if I have an epic weapon in stock - the", random_epic_aweapon,"!")
+            else:
+                print("")
+
+            typedweapon=str(input("Which weapon would you like to purchase? Please note that I am case sensitive."))
+            if typedweapon in {first_random_common_aweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                krikor=krikor-price1
+                weapontradeloop = False
+            elif typedweapon in {second_random_common_aweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                krikor=krikor-price1
+                weapontradeloop = False
+            elif typedweapon in {third_random_common_aweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                krikor=krikor-price1
+                weapontradeloop = False
+            elif typedweapon in {fourth_random_common_aweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                krikor=krikor-price1
+                weapontradeloop = False
+            elif typedweapon in {fifth_random_common_aweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                krikor=krikor-price1
+                weapontradeloop = False
+            elif typedweapon in {sixth_random_common_aweapon}:
+                print("Excellent. That will be", price1,"krikor.")
+                krikor=krikor-price1
+                weapontradeloop = False
+            elif typedweapon in {first_random_rare_aweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                krikor=krikor-price2
+                weapontradeloop = False
+            elif typedweapon in {second_random_rare_aweapon}:
+                print("Excellent. That will be", price2,"krikor.")
+                krikor=krikor-price2
+                weapontradeloop = False
+            elif typedweapon in {random_epic_aweapon}:
+                print("Excellent. That will be", price3,"krikor.")
+                krikor=krikor-price3
+                weapontradeloop = False
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+
+    elif freetradein == "materials":
+        print(random.choice(traderexclamationsjoyful), "I have a rather wide range of materials here for you to buy from me.")
+        input()
+        print("They might not be as cheap as those from your other friends, but I come round many times more often!")
+        input()
+        print("Its only fair you buy from me instead.")
+        input()
+        print("I have a selection of Wood, Coal, Iron and Stone.")
+        input()
+        materialtradeloop = True
+        while materialtradeloop == True:
+            typedmaterial=str(input("What would you like to purchase?"))
+            if typedmaterial == "Wood" or typedmaterial == "wood":
+                print("Excellent. That will", woodprice,"be krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Coal" or typedmaterial == "coal":
+                print("Excellent. That will be", coalprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Iron" or typedmaterial == "iron":
+                print("Excellent. That will be", ironprice,"krikor.")
+                materialtradeloop = False
+            elif typedmaterial == "Stone" or typedmaterial == "stone":
+                print("Excellent. That will be", stoneprice,"krikor.")
+                materialtradeloop = False
+            else:
+                print("")
+                print("I'm sorry but that is not a valid option. Please try again.")
+            
+
+    elif freetradein=="none":
+        print("That's unfortunate. I hope we could do businesss sometime else.")
+        input()
+
+    else:
+        print("An error has occurered. Please try again.")
+        input()
 
 def everydaylifeT():
+    print("")
+    global Tpop
+    global Tresources
+    global Thappy
+    global Tmilitary
+    global Tmagic
+    global krikor
+    event1=random.randint(0,9)
+    event2=random.randint (0,9)
+    event3=random.randint(0,9)
+    event4=random.randint (0,9)
+    event5=random.randint(0,1)
+    event6=random.randint (0,9)
+    event7=random.randint (0,19)
+    event8=random.randint (0,19)
+    event9=random.randint(0,9)
+    event10=random.randint (0,19)
+    event11=random.randint(0,19)
+    event12=random.randint (0,9)
+    Jahestirrsacrifice1=False
+    Jahestirrsacrifice2=False
+    Jahestirrsacrifice3=False
+    Jahestirrsacrifice4=False
+    Jahestirrsacrifice5=False
+    Arasacrifice1=False
+    Arasacrifice2=False
+    Arasacrifice3=False
+    Arasacrifice4=False
+    Arasacrifice5=False
+    Esmyausacrifice1=False
+    Esmyausacrifice2=False
+    Esmyausacrifice3=False
+    Esmyausacrifice4=False
+    Esmyausacrifice5=False
+    Umisirsacrifice1=False
+    Umisirsacrifice2=False
+    Umisirsacrifice3=False
+    Umisirsacrifice4=False
+    Umisirsacrifice5=False
+    Trillinisacrifice1=False
+    Trillinisacrifice2=False
+    Trillinisacrifice3=False
+    Trillinisacrifice4=False
+    Trillinisacrifice5=False
+    Lenicarasacrifice1=False
+    Lenicarasacrifice2=False
+    Lenicarasacrifice3=False
+    Lenicarasacrifice4=False
+    Lenicarasacrifice5=False
+    Goaersacrifice1=False
+    Goaersacrifice2=False
+    Goaersacrifice3=False
+    Goaersacrifice4=False
+    Goaersacrifice5=False
+    if event1==0 or event1==1 or event1==2 or event1==3 or event1==4 or event1==5:
+        input("You must sacrifice to Jahestirr this week, god of the harvest.")
+        Jahestirrsacrifice1=True
+    else:
+        input
+    if event2==0 or event2==1 or event2==2 or event2==3:
+        input("You must sacrifice to Ara this week, goddess of magic and love.")
+        Arasacrifice1=True
+    else:
+        input
+    if event3==0 or event3==1:
+        input("You must sacrifice to Esmyau this week, goddess of peace.")
+        Esmyausacrifice1=True
+    else:
+        input
+    if event4==0:
+        input("You must sacrifice to Umisir this week, god of happiness.")
+        Umisirsacrifice1=True
+    else:
+        input
+    if event5==0 or event5==1:
+        input("You must sacrifice to Trillini this week, king of the Gods.")
+        Trillinisacrifice1=True
+    else:
+        input
+    if event6==0 or event6==1 or event6==2:
+        input("You must sacrifice to Lenicara and Goaer this week, gods of luck and war.")
+        Lenicarasacrifice1=True
+        Goaersacrifice1=True
+    else:
+        input
+    if event7==0:
+        #CHANGE POP NATE FOR EACH CLAN
+        Tpop=round(Tpop*0.96)
+        print("There was a bad flood this week. You have lost 4% of your population. Your current population is", Wpop, ".")
+    else:
+        input
+    if event8==0:
+        Tpop=round(Tpop*0.92)
+        #CHANGE POP NATE FOR EACH CLAN
+        print("There was a big fire this week. You have lost 8% of your population. Your current population is", Wpop, ".")
+    else:
+        input
+    if event9==0:
+        input("There was a drought this week.")
+    elif event9==1:
+        input("There was good rainfall this week. You must sacrifice to Lenicara.")
+        Lenicarasacrifice2=True
+    else:
+        input
+    if event10==0 or event10==1 or event10==2:
+        input("There was a bad harvest this week.")
+    elif event10==3 or event10==4 or event10==5 or event10==6:
+        input("There was a good harvest this week. You must sacrifice to Jahestirr.")
+        Jahestirrsacrifice2=True
+    else:
+        input
+    if event11==0 or event11==1 or event11==2:
+        input("There was a wedding this week. You must sacrifice to Ara.")
+        Arasacrifice2=True
+    else:
+        input
+    if event12==0 or event12==1 or event12==2 or event12==3 or event12==4 or event12==5 or event12==6 or event12==7:
+        input("The free trader has come to visit. ")
+        freetraderT()
+    else:
+        input
+
+    choicesacrificeJ=input("Do you want to sacrifice to Jahestirr? Yes or no?")
+    if choicesacrificeJ.lower()=="yes" or choicesacrificeJ.lower()=="y":
+        print("You shall sacrifice to Jahestirr.")
+        choicesacrificeJamount=int(input("How many times would you like to sacrifice to Jahestirr?"))
+        if choicesacrificeJamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeJamount==0:
+            print("You changed your mind and decided not to sacrifice to Jahestirr.")
+            input()
+        elif choicesacrificeJamount==1:
+            print("You gave one sacrifice to Jahestirr.")
+            Jahestirrsacrifice1=False
+            input()
+            print("The sacrifice to Jahestirr cost you", Jsacriprice*1, "Krikor." )
+            krikor=krikor-(Jsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==2:
+            print("You gave two sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*2, "Krikor." )
+            krikor=krikor-(Jsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==3:
+            print("You gave three sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*3, "Krikor." )
+            krikor=krikor-(Jsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==4:
+            print("You gave four sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            Jahestirrsacrifice4=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*4, "Krikor." )
+            krikor=krikor-(Jsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount==5:
+            print("You gave five sacrifices to Jahestirr.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            Jahestirrsacrifice4=False
+            Jahestirrsacrifice5=False
+            input()
+            print("The sacrifices to Jahestirr cost you", Jsacriprice*5, "Krikor." )
+            krikor=krikor-(Jsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeJamount>5:
+            print("Jahestirr doesnt want that many sacrifices, so instead, you just gave him 5.")
+            Jahestirrsacrifice1=False
+            Jahestirrsacrifice2=False
+            Jahestirrsacrifice3=False
+            Jahestirrsacrifice4=False
+            Jahestirrsacrifice5=False
+            input()
+            krikor=krikor-(Jsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Jahestirr.")
+        input()
+
+    choicesacrificeA=input("Do you want to sacrifice to Ara? Yes or no?")
+    if choicesacrificeA.lower()=="yes" or choicesacrificeA.lower()=="y":
+        print("You shall sacrifice to Ara.")
+        choicesacrificeAamount=int(input("How many times would you like to sacrifice to Ara?"))
+        if choicesacrificeAamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeAamount==0:
+            print("You changed your mind and decided not to sacrifice to Ara.")
+            input()
+        elif choicesacrificeAamount==1:
+            print("You gave one sacrifice to Ara.")
+            Arasacrifice1=False
+            input()
+            print("The sacrifice to Ara cost you", Asacriprice*1, "Krikor." )
+            krikor=krikor-(Asacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==2:
+            print("You gave two sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*2, "Krikor." )
+            krikor=krikor-(Asacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==3:
+            print("You gave three sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*3, "Krikor." )
+            krikor=krikor-(Asacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==4:
+            print("You gave four sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            Arasacrifice4=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*4, "Krikor." )
+            krikor=krikor-(Asacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount==5:
+            print("You gave five sacrifices to Ara.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            Arasacrifice4=False
+            Arasacrifice5=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*5, "Krikor." )
+            krikor=krikor-(Asacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeAamount>5:
+            print("Ara doesnt want that many sacrifices, so instead, you just gave her 5.")
+            Arasacrifice1=False
+            Arasacrifice2=False
+            Arasacrifice3=False
+            Arasacrifice4=False
+            Arasacrifice5=False
+            input()
+            print("The sacrifices to Ara cost you", Asacriprice*5, "Krikor." )
+            krikor=krikor-(Asacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Ara.")
+        input()
+
+    choicesacrificeE=input("Do you want to sacrifice to Esmyau? Yes or no?")
+    if choicesacrificeE.lower()=="yes" or choicesacrificeE.lower()=="y":
+        print("You shall sacrifice to Esmyau.")
+        choicesacrificeEamount=int(input("How many times would you like to sacrifice to Esmyau?"))
+        if choicesacrificeEamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeEamount==0:
+            print("You changed your mind and decided not to sacrifice to Esmyau.")
+            input()
+        elif choicesacrificeEamount==1:
+            print("You gave one sacrifice to Esmyau.")
+            Esmyausacrifice1=False
+            input()
+            print("The sacrifice to Esmyau cost you", Esacriprice*1, "Krikor." )
+            krikor=krikor-(Esacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==2:
+            print("You gave two sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*2, "Krikor." )
+            krikor=krikor-(Esacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==3:
+            print("You gave three sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*3, "Krikor." )
+            krikor=krikor-(Esacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==4:
+            print("You gave four sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            Esmyausacrifice4=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*4, "Krikor." )
+            krikor=krikor-(Esacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount==5:
+            print("You gave five sacrifices to Esmyau.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            Esmyausacrifice4=False
+            Esmyausacrifice5=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*5, "Krikor." )
+            krikor=krikor-(Esacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeEamount>5:
+            print("Esmyau doesnt want that many sacrifices, so instead, you just gave him 5.")
+            Esmyausacrifice1=False
+            Esmyausacrifice2=False
+            Esmyausacrifice3=False
+            Esmyausacrifice4=False
+            Esmyausacrifice5=False
+            input()
+            print("The sacrifices to Esmyau cost you", Esacriprice*5, "Krikor." )
+            krikor=krikor-(Esacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Esmyau.")
+        input()
+
+    choicesacrificeU=input("Do you want to sacrifice to Umisir? Yes or no?")
+    if choicesacrificeU.lower()=="yes" or choicesacrificeU.lower()=="y":
+        print("You shall sacrifice to Umisir.")
+        choicesacrificeUamount=int(input("How many times would you like to sacrifice to Umisir?"))
+        if choicesacrificeUamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeUamount==0:
+            print("You changed your mind and decided not to sacrifice to Umisir.")
+            input()
+        elif choicesacrificeUamount==1:
+            print("You gave one sacrifice to Umisir.")
+            Umisirsacrifice1=False
+            input()
+            print("The sacrifice to Umisir cost you", Usacriprice*1, "Krikor." )
+            krikor=krikor-(Usacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==2:
+            print("You gave two sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*2, "Krikor." )
+            krikor=krikor-(Usacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==3:
+            print("You gave three sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*3, "Krikor." )
+            krikor=krikor-(Usacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==4:
+            print("You gave four sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            Umisirsacrifice4=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*4, "Krikor." )
+            krikor=krikor-(Usacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount==5:
+            print("You gave five sacrifices to Umisir.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            Umisirsacrifice4=False
+            Umisirsacrifice5=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*5, "Krikor." )
+            krikor=krikor-(Usacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeUamount>5:
+            print("Umisir doesnt want that many sacrifices, so instead, you just gave him 5.")
+            Umisirsacrifice1=False
+            Umisirsacrifice2=False
+            Umisirsacrifice3=False
+            Umisirsacrifice4=False
+            Umisirsacrifice5=False
+            input()
+            print("The sacrifices to Umisir cost you", Usacriprice*5, "Krikor." )
+            krikor=krikor-(Usacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Umisir.")
+        input()
+
+    choicesacrificeT=input("Do you want to sacrifice to Trillini? Yes or no?")
+    if choicesacrificeT.lower()=="yes" or choicesacrificeT.lower()=="y":
+        print("You shall sacrifice to Trillini.")
+        choicesacrificeTamount=int(input("How many times would you like to sacrifice to Trillini?"))
+        if choicesacrificeTamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeTamount==0:
+            print("You changed your mind and decided not to sacrifice to Trillini.")
+            input()
+        elif choicesacrificeTamount==1:
+            print("You gave one sacrifice to Trillini.")
+            input()
+            print("The sacrifice to Trillini cost you", Tsacriprice*1, "Krikor." )
+            Trillinisacrifice1=False
+            krikor=krikor-(Tsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==2:
+            print("You gave two sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*2, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            krikor=krikor-(Tsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==3:
+            print("You gave three sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*3, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            krikor=krikor-(Tsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==4:
+            print("You gave four sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*4, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            Trillinisacrifice4=False
+            krikor=krikor-(Tsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount==5:
+            print("You gave five sacrifices to Trillini.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*5, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            Trillinisacrifice4=False
+            Trillinisacrifice5=False
+            krikor=krikor-(Tsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeTamount>5:
+            print("Trillini doesnt want that many sacrifices, so instead, you just gave him 5.")
+            input()
+            print("The sacrifices to Trillini cost you", Tsacriprice*5, "Krikor." )
+            Trillinisacrifice1=False
+            Trillinisacrifice2=False
+            Trillinisacrifice3=False
+            Trillinisacrifice4=False
+            Trillinisacrifice5=False
+            krikor=krikor-(Tsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Trillini.")
+        input()
+
+    choicesacrificeL=input("Do you want to sacrifice to Lenicara? Yes or no?")
+    if choicesacrificeL.lower()=="yes" or choicesacrificeL.lower()=="y":
+        print("You shall sacrifice to Lenicara.")
+        choicesacrificeLamount=int(input("How many times would you like to sacrifice to Lenicara?"))
+        if choicesacrificeLamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeLamount==0:
+            print("You changed your mind and decided not to sacrifice to Lenicara.")
+            input()
+        elif choicesacrificeLamount==1:
+            print("You gave one sacrifice to Lenicara.")
+            input()
+            print("The sacrifice to Lenicara cost you", Lsacriprice*1, "Krikor." )
+            Lenicarasacrifice1=False
+            krikor=krikor-(Lsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==2:
+            print("You gave two sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*2, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            krikor=krikor-(Lsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==3:
+            print("You gave three sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*3, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            krikor=krikor-(Lsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==4:
+            print("You gave four sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*4, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            Lenicarasacrifice4=False
+            krikor=krikor-(Lsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount==5:
+            print("You gave five sacrifices to Lenicara.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*5, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            Lenicarasacrifice4=False
+            Lenicarasacrifice5=False
+            krikor=krikor-(Lsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeLamount>5:
+            print("Lenicara doesnt want that many sacrifices, so instead, you just gave him 5.")
+            input()
+            print("The sacrifices to Lenicara cost you", Lsacriprice*5, "Krikor." )
+            Lenicarasacrifice1=False
+            Lenicarasacrifice2=False
+            Lenicarasacrifice3=False
+            Lenicarasacrifice4=False
+            Lenicarasacrifice5=False
+            krikor=krikor-(Lsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Lenicara.")
+        input()
+
+    choicesacrificeG=input("Do you want to sacrifice to Goaer? Yes or no?")
+    if choicesacrificeG.lower()=="yes" or choicesacrificeG.lower()=="y":
+        print("You shall sacrifice to Goaer.")
+        choicesacrificeGamount=int(input("How many times would you like to sacrifice to Goaer?"))
+        if choicesacrificeGamount<0:
+            print("You cannot give negative sacrifices. Thats just common sense. You dont sacrifice anything.")
+            input()
+        elif choicesacrificeGamount==0:
+            print("You changed your mind and decided not to sacrifice to Goaer.")
+            input()
+        elif choicesacrificeGamount==1:
+            print("You gave one sacrifice to Goaer.")
+            input()
+            print("The sacrifice to Goaer cost you", Gsacriprice*1, "Krikor." )
+            Goaersacrifice1=False
+            krikor=krikor-(Gsacriprice*1)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==2:
+            print("You gave two sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*2, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            krikor=krikor-(Gsacriprice*2)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==3:
+            print("You gave three sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*3, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            krikor=krikor-(Gsacriprice*3)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==4:
+            print("You gave four sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*4, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            Goaersacrifice4=False
+            krikor=krikor-(Gsacriprice*4)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount==5:
+            print("You gave five sacrifices to Goaer.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*5, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            Goaersacrifice4=False
+            Goaersacrifice5=False
+            krikor=krikor-(Gsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+        elif choicesacrificeGamount>5:
+            print("Goaer doesnt want that many sacrifices, so instead, you just gave him 5.")
+            input()
+            print("The sacrifices to Goaer cost you", Gsacriprice*5, "Krikor." )
+            Goaersacrifice1=False
+            Goaersacrifice2=False
+            Goaersacrifice3=False
+            Goaersacrifice4=False
+            Goaersacrifice5=False
+            krikor=krikor-(Gsacriprice*5)
+            input()
+            print("You now have", krikor, "Krikor.")
+            input()
+    else:
+        print("You shall not sacrifice to Goaer.")
+        input()
+
+    if Jahestirrsacrifice1==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Tresources=Tresources-10
+        Thappy=Thappy-3
+    if Jahestirrsacrifice2==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Tresources=Tresources-10
+        Thappy=Thappy-3
+    if Jahestirrsacrifice3==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Tresources=Tresources-10
+        Thappy=Thappy-3
+    if Jahestirrsacrifice4==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Tresources=Tresources-10
+        Thappy=Thappy-3
+    if Jahestirrsacrifice5==True:
+        input("You forgot to sacrifice to Jahestirr. You have a terrible harvest.")
+        Tresources=Tresources-10
+        Thappy=Thappy-3
+    if Arasacrifice1==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy and takes some of your magic.")
+        Thappy=Thappy-20
+        Tmagic=Tmagic-15
+    if Arasacrifice2==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy and takes some of your magic.")
+        Thappy=Thappy-20
+        Tmagic=Tmagic-15
+    if Arasacrifice3==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy and takes some of your magic.")
+        Thappy=Thappy-20
+        Tmagic=Tmagic-15
+    if Arasacrifice4==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy and takes some of your magic.")
+        Thappy=Thappy-20
+        Tmagic=Tmagic-15
+    if Arasacrifice5==True:
+        input("You forgot to sacrifice to Ara. She magically makes you unhappy and takes some of your magic.")
+        Thappy=Thappy-20
+        Tmagic=Tmagic-15
+    if Esmyausacrifice1==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Tpop=Tpop-1
+        Thappy=Thappy-10
+    if Esmyausacrifice2==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Tpop=Tpop-1
+        Thappy=Thappy-10
+    if Esmyausacrifice3==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Tpop=Tpop-1
+        Thappy=Thappy-10
+    if Esmyausacrifice4==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Tpop=Tpop-1
+        Thappy=Thappy-10
+    if Esmyausacrifice5==True:
+        input("You forgot to sacrifice to Esmyau. There is a brawl in the local pub and a man dies.")
+        Tpop=Tpop-1
+        Thappy=Thappy-10
+    if Umisirsacrifice1==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Thappy=Thappy-60
+    if Umisirsacrifice2==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Thappy=Thappy-60
+    if Umisirsacrifice3==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Thappy=Thappy-60
+    if Umisirsacrifice4==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Thappy=Thappy-60
+    if Umisirsacrifice5==True:
+        input("You forgot to sacrifice to Umisir. A wave of sadness spreads through your clan.")
+        Thappy=Thappy-60
+    if Trillinisacrifice1==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Tpop=Tpop-random.randint(100,150)
+    if Trillinisacrifice2==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Tpop=Tpop-random.randint(100,150)
+    if Trillinisacrifice3==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Tpop=Tpop-random.randint(100,150)
+    if Trillinisacrifice4==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Tpop=Tpop-random.randint(100,150)
+    if Trillinisacrifice5==True:
+        input("You have angered the lord of the gods. He decimates your population, killing hundreds.")
+        Tpop=Tpop-random.randint(100,150)
+    if Lenicarasacrifice1==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Tpop=Tpop-10
+        Thappy=Thappy-10
+    if Lenicarasacrifice2==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Tpop=Tpop-10
+        Thappy=Thappy-10
+    if Lenicarasacrifice3==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Tpop=Tpop-10
+        Thappy=Thappy-10
+    if Lenicarasacrifice4==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Tpop=Tpop-10
+        Thappy=Thappy-10
+    if Lenicarasacrifice5==True:
+        input("You forgot to sacrifice to Lenicara. Your raid on a nearby village fails.")
+        Tpop=Tpop-10
+        Thappy=Thappy-10
+    if Goaersacrifice1==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Tmilitary=Tmilitary-4
+    if Goaersacrifice2==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Tmilitary=Tmilitary-4
+    if Goaersacrifice3==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Tmilitary=Tmilitary-4
+    if Goaersacrifice4==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Tmilitary=Tmilitary-4
+    if Goaersacrifice5==True:
+        input("You forgot to sacrifice to Goaer. You are attacked by a nearby village but you fend them off.")
+        Tmilitary=Tmilitary-4
+    print("")
     print("")
 
 def everydaylifeM():
@@ -1059,6 +2420,7 @@ def everydaylifeM():
             print("You gave four sacrifices to Ara.")
             Arasacrifice1=False
             Arasacrifice2=False
+
             Arasacrifice3=False
             Arasacrifice4=False
             input()
@@ -3275,11 +4637,130 @@ def everydaylifeA():
 
 def majorchoiceT():
     print("")
-
+    Tmajorchoice=random.randint(1,3)
+    print("On your way to breakfast you notace people gathered around the castle gates, screaming and crying.")
+    input()
+    print("As you enter the banquit hall your advisor come to you with very depressing news.")
+    input()
+    print('He tells you that "We have recieved word from the Warriors that the Archer clan have waged war on them.')
+    print("We also recieved word from scouts on the boarders that Archer groups have been atacking our people and using their wooden flesh to make stronger bow.")
+    print("What do you want to do, you can either a. send a small army to atack the small gangs of archers (chance of Trents dying) b. tell the people near the border to come into the castle for safety (must pay lots for food and transportaion of civilians. 1000 - 2000 Krikor to be precise) or c. do nothing what so ever (will make your population very angry).")
+    Tmajorchoiceinput=input()
+    if Tmajorchoiceinput == 'a':
+        if Tmajorchoice == 1:
+            civiliansdied=random.randint(200,500)
+            troopssent=random.randint(600,800)
+            died=troopssent+civiliansdied
+            Tpop=Tpop-died
+            print("A large group of Archers breached the boarder as your troops went to atack")
+            print("All the Archers retreated, but not untill they killed many civilians and all your troops")
+            input()
+            print("They killed "+died+" Trents.")
+            print("You now have a population of "+Tpop+".")
+        else:
+            troopssent=random.randint(400,500)
+            print("You send "+troopssent+" troops and kill all the archers that invaded")
+            input()
+            troopsdied=random.randint(100,300)
+            print(""+troopsdied+"Trents died in the procces")
+            Tpop=Tpop-troopsdied
+            input()
+            print("You now have a population of "+Tpop+"")
+                  
+    if Tmajorchoiceinput == 'b':
+        Tcrisispay=random.randint(1000,2000)
+        krikor=krikor-Tcrisispay
+        print("You tell the civilians neer the boarder to come to the castle for safety")
+        input()              
+        print("You must pay "+Tcrisispay+" Krikor")
+        print("You now have "+krikor+" Krikor")
+          
+    if Tmajorchoiceinput == 'c':
+              print("You tell your advisors to do absolutely nothing asuring them that it will be for the best")
+              input()
+              print("Later that day an angry mob starts protesting")
+              input()
+              mobanger=random.randint(40-50)
+              Thappy=Thappy-mobanger
+              print("You have angered your population severely")
+              print("Your population is now "+Thappy+"% happy")
 
 def archermagecomp():
     #reliant on ethan
     print("")
+    print("You recieve news from the clan elders that it is time for the annual Projectile tournament.")
+    input("")
+    print("Do you decide to host the tournament? It is said that if you do win the tournament you will gain lots of riches, but if you lose, you will gain nothing.")
+    input("")
+    print("The amount of money you win or lose depends on how much you decide to bet.")
+    archerparticipate=input("Would you like to participate?")
+
+    projectile_event_loop = True
+    while projectile_event_loop == True:
+        
+        if archerparticipate.lower()=="yes":
+            archer_bet = raw_input("You have decided to enter the event. How much would you like to bet? 1000, 5000 or 10000 krikor? You currently have" ,krikor, "krikor.")
+            if archer_bet == 1000:
+                print("You have decided to bet 1000 krikor for the event.")  
+                krikor=krikor-1000
+                print("You now have", krikor, "krikor.")
+                input()
+                print("The tournament will take place in a week and you will recieve the results then.")
+                projectile_event_loop = False
+
+            elif archer_bet == 5000:
+                print("You have decided to bet 5000 krikor for the event.")
+                krikor=krikor-5000
+                print("You now have", krikor, "krikor.")
+                input()
+                print("The tournament will take place in a week and you will recieve the results then.")
+                projectile_event_loop = False
+
+            elif archer_bet == 10000:
+                print("You have decided to bet 10000 krikor for the event.")
+                krikor=krikor-10000
+                print("You now have", krikor, "krikor.")
+                projectile_event_loop = False
+
+            else:
+                print("That is not a valid bet. Please try again")
+
+    else:
+        input("You have decided not to participate. There has been no change to your krikor.")
+
+    tournamentwinA=random.randint(0,2)
+    everydaylifeA()
+    input("A week has passed.")
+    if tournamentwinA == 1:
+        print("The results of the Projectile Tournament have arrived from the mages!")
+        input()
+        print("The results are... in third place...")
+        input("The trents!")
+        print("In second place we have...")
+        input("The mages!")
+        print("And in first place...")
+        input("The archers!")
+        print("Congratulations on winning this years Projectile Tournament!")
+        input()
+        archer_bet=archer_bet + 10000
+        print("You have gained" , archer_bet, "krikor as a gift from the other clans for winning!")
+        krikor=krikor+archer_bet
+        Apop=Apop+5
+        Aresources=Aresources+50
+        print("You currently have a poulation of", Apop, ", ", Aresources, " resources and", krikor, "krikor.")
+
+    else:
+        print("The results of the Projectile Tournament have arrived from the mages!")
+        input()
+        print("The results are... in third place...")
+        input("The trents!")
+        print("In second place we have...")
+        input("The archers!")
+        print("And in first place...")
+        input("The mages!")
+        print("Unfortunately since you have lost the tournament, you haven't gained any krikor, resources or troops.")
+        input()
+        print("There have been no changes to your population, resources or krikor.")
 
     
 def majorchoiceM():
@@ -3293,7 +4774,7 @@ def majorchoiceM():
     print("The contest takes place next week and the winner gets a prize provided by the loser, and is followed by an open market day.")
     input()
     joincompM=input("Do you want to join the competition? Yes or No?")
-    if joincompM == "yes" or joincompM == "y" or joincompM == "yeah":
+    if joincompM == "yes" or joincompM == "y":
         print("Excellent! Your friends await your competition. Your people are happy to take part.")
         joinedcompM=True
         Mhappy=Mhappy+10
@@ -3311,14 +4792,13 @@ def majorchoiceM():
     else:
         input("A week has passed.")
 
-
 def majorchoiceW():
     print("A traveller visited yesterday and, due to the fact that you sheltered him, he taught you how to mine deeper in order to get more minerals.")
     input("")
     print("By digging deeper you may become richer and gain more resources however some people may die of exhaustion.")
     input("")
     minedeeper=input("Do you want to mine deeper?")
-    if minedeeper.lower()=="yes":
+    if minedeeper.lower()=="yes" or minedeeper.lower()=="y":
         input("You have decided to mine deeper. You have gained 1000 krikor, 60 resources and lost 6 men.")
         krikor=krikor+1000
         Wpop=Wpop-6
@@ -3328,234 +4808,256 @@ def majorchoiceW():
     else:
         input("You have decided not to mine deeper. Your people are angry that you didnt take the opportunity, and become unhappy.")
         Whappy=Whappy-5
-
         
 def majorchoiceA():
-    print("")
+    print("You recieve news from the clan elders that it is time for the annual Projectile tournament.")
+    input("")
+    print("Do you decide to host the tournament? It is said that if you do win the tournament you will gain lots of riches, but if you lose, you will gain nothing.")
+    input("")
+    print("The amount of money you win or lose depends on how much you decide to bet.")
+    archerparticipate=input("Would you like to participate?")
 
+    projectile_event_loop = True
+    while projectile_event_loop == True:
+        
+        if archerparticipate.lower()=="yes":
+            archer_bet = raw_input("You have decided to enter the event. How much would you like to bet? 1000, 5000 or 10000 krikor? You currently have" ,krikor, "krikor.")
+            if archer_bet == 1000:
+                print("You have decided to bet 1000 krikor for the event.")  
+                krikor=krikor-1000
+                print("You now have", krikor, "krikor.")
+                input()
+                print("The tournament will take place in a week and you will recieve the results then.")
+                projectile_event_loop = False
 
-def randchoiceM():
+            elif archer_bet == 5000:
+                print("You have decided to bet 5000 krikor for the event.")
+                krikor=krikor-5000
+                print("You now have", krikor, "krikor.")
+                input()
+                print("The tournament will take place in a week and you will recieve the results then.")
+                projectile_event_loop = False
+
+            elif archer_bet == 10000:
+                print("You have decided to bet 10000 krikor for the event.")
+                krikor=krikor-10000
+                print("You now have", krikor, "krikor.")
+                projectile_event_loop = False
+
+            else:
+                print("That is not a valid bet. Please try again")
+
+    else:
+        input("You have decided not to participate. There has been no change to your krikor.")
+        
+    if archerparticipate.lower()==yes:
+        input("A week has passed.")
+        print("The time for the competition has arrived.")
+        archermagecomp()
+        tournamentwinA=random.randint(0,2)
+        everydaylifeA()
+        tournamentwinA=random.randint(0,2)
+        everydaylifeA()
+        input("A week has passed.")
+        if tournamentwinA == 1:
+            print("The results of the Projectile Tournament have arrived from the mages!")
+            input()
+            print("In second place we have...")
+            input("The mages!")
+            print("And in first place...")
+            input("The archers!")
+            print("Congratulations on winning this years Projectile Tournament!")
+            input()
+            archer_bet=archer_bet*1.5
+            print("You have gained" , archer_bet, "krikor as a gift from the other clans for winning!")
+            krikor=krikor+archer_bet
+            Apop=Apop+5
+            Aresources=Aresources+50
+            print("You currently have a poulation of", Apop, ", ", Aresources, " resources and", krikor, "krikor.")
+
+        else:
+            print("The results of the Projectile Tournament have arrived from the mages!")
+            input()
+            print("In second place we have...")
+            input("The archers!")
+            print("And in first place...")
+            input("The mages!")
+            print("Unfortunately since you have lost the tournament, you haven't gained any krikor, resources or troops.")
+            input()
+            print("There have been no changes to your population, resources or krikor.")
+        
+    else:
+        input("A week has passed.")
+        
+def randchoice():
     global krikor
     global Thappy
     global Mhappy
     global Whappy
     global Ahappy
-    randomchoiceofevents=random.randint(0,4)
-    if randomchoiceofevents==0:
-        #marriage event
-        if clan == trent:
-            marriageproposalfrom=random.randint(0,1)
+    global Tpop
+    global Mpop
+    global Wpop
+    global Apop
+            
+    ocurance=random.randint(0,3)
+    print("Before the normal week begins, something unusual happens.")
+    if ocurance==0:
+        print("""A clan oficial's daughter is to be wed.
+He asks you to help coordinate the wedding.
+Doing so will cause you to help with the cost of the wedding, but will make your population happy.
+Do you want to help or decline?""")
+        wedocur=input()
+        if wedocur=='help':
+            wedocurprice=random.randint(200,500)
+            wedocurhappy=random.randint(5,10)
+            if clan == trent:
+                Thappy=Thappy+wedocurhapy
+            if clan == mage:
+                Mhappy=Mhappy+wedocurhapy
+            if clan == warrior:
+                Whappy=Whappy+wedocurhapy
+            if clan == archer:
+                Ahappy=Ahappy+wedocurhapy
+            krikor=krikor-wedocurprice
+            print("You help pay for the weding and orgainze a large parade.")
+            print("You pay "+wedocurprice+" krikor. You now have "+krikor+" krikor and a happiness of "+Thappy+".")
+            
+        if wedocur=='decline':
+            wedocurhapy=random.randint(5,10)
+            if clan == trent:
+                Thappy=Thappy-wedocurhapy
+            if clan == mage:
+                Mhappy=Mhappy-wedocurhapy
+            if clan == warrior:
+                Whappy=Whappy-wedocurhapy
+            if clan == archer:
+                Ahappy=Ahappy-wedocurhapy
+            print("You decline the request saying that you are to busy. your population now has a happiness of "+Thappy+".")
+
+    if ocurance==1:
+        barbariantroop=random.randint(20,30)
+        print("A small group of "+barbariantrooop+""" Barbarians have come into your borders.
+Do you want to a. let them be and hope that they move along or b. send a small force to take care of them?""")
+
+    if ocurance==2:
+        cariagegood=random.randint(0,4)
+        print("""Your lookout comes to you with news at the border.
+He says that a man, either a messenger or a thief, in a cariage has been spotted heading towards the capital.
+He asks if he should let it proceed or if he should shoot it.""")
+        cariageaprochcap=input("Choose 'proceed' or 'attack'.")
+        if cariageaprochcap=='proceed':
+            if cariagegood==1:
+                atacktole=random.randint(40,50)
+                if clan == trent:
+                    Tpop=Tpop-atacktole
+                    print("""The carriage comes closer to the walls. As it aproaches several men step out and rain burning arrows down on the towns folk.
+After a small skermish the raiders are killed and the bodies are counted.""")
+                    print("You now have a population of "+Tpop+"")
+                if clan == mage:
+                    Mpop=Mpop-atacktole
+                    print("""The carriage comes closer to the walls. As it aproaches several men step out and rain burning arrows down on the towns folk.
+After a small skermish the raiders are killed and the bodies are counted.""")
+                    print("You now have a population of "+Mpop+"")
+                if clan == warrior:
+                    Wpop=Wpop-atacktole
+                    print("""The carriage comes closer to the walls. As it aproaches several men step out and rain burning arrows down on the towns folk.
+After a small skermish the raiders are killed and the bodies are counted.""")
+                    print("You now have a population of "+Wpop+"")
+                if clan == archer:
+                    Apop=Apop-atacktole
+                    print("""The carriage comes closer to the walls. As it aproaches several men step out and rain burning arrows down on the towns folk.
+After a small skermish the raiders are killed and the bodies are counted.""")
+                    print("You now have a population of "+Apop+"")               
+            else:
+                gift=random.randint(100,300)
+                krikor=krikor+gift
+                print("They come with a crate of krikor as a gift to your people")
+                print("You now have "+krikor+" krikor")
+
+        if cariageaprochcap=='attack':
+            print("The lookout goes off to get your guards, who shoot the carriage.")
+            if cariagegood==1 or cariagegood==2:
+                penence=random.randint(1000,1800)
+                krikor=krikor-penence
+                print("""Later, a scout returns to you with news of the cariage.
+He says that it was actually an invitation to a wedding from the wariors.""")
+                print("You must pay the warrior clan "+penence+" krikor to make up for this crime.")
+                print("You now have "+krikor+" krikor.")
+            else:
+                lootcariage=random.randint(40,100)
+                krikor=krikor+lootcariage
+                print("""Later that day a scout returns to you with news of the cariage.
+He says that it was infact a cariage with several barbarians hidden in barrels in the back.
+The scout says that the cariage tipped over killing the barbarians.
+He also presents you with a small chest of gold from the carriage.""")
+                print("You now have "+krikor+" Krikor")
+    if ocurance==3:               
+        marriageproposalfrom=random.randint(0,1)
+        if clan==trent:
             if marriageproposalfrom==0:
                 print("You have been sent a message from the Warrior clan.")
-                input()
-                if chargender=="boy":
-                    print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Thappy=Thappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Thappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                       
-                elif chargender=="girl":
-                    print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Thappy=Thappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Thappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-            elif marriageproposalfrom==1:
+            else:
                 print("You have been sent a message from the Mage clan.")
-                input()
-                if chargender=="boy":
-                    print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Thappy=Thappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Thappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                       
-                elif chargender=="girl":
-                    print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Thappy=Thappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Thappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-
-        elif clan == mage:
-            
-            marriageproposalfrom=random.randint(0,1)
-            if marriageproposalfrom==1:
-                print("You have been sent a message from the Warrior clan.")
-                input()
-                if chargender=="boy":
-                    print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Mhappy=Mhappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Mhappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                       
-                elif chargender=="girl":
-                    print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Mhappy=Mhappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Mhappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-                elif marriageproposalfrom==1:
-                    print("You have been sent a message from the Archer clan.")
-                    input()
-                    if chargender=="boy":
-                        print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                        print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                        input()
-                        marriageacceptance=input("Would you like to marry her?")
-                        if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                            print("Your wedding takes place immediately. You are now married.")
-                            krikor=krikor-5000
-                            Mhappy=Mhappy*2
-                            print("You now have", krikor, "krikor and a happiness of", Mhappy, ".")
-                        else:
-                            print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                           
-                    elif chargender=="girl":
-                        print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                        print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                        input()
-                        marriageacceptance=input("Would you like to marry her?")
-                        if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                            print("Your wedding takes place immediately. You are now married.")
-                            krikor=krikor-5000
-                            Mhappy=Mhappy*2
-                            print("You now have", krikor, "krikor and a happiness of", Mhappy, ".")
-                        else:
-                            print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-
-        elif clan == warrior:
-            marriageproposalfrom=random.randint(0,1)
-            if marriageproposalfrom==1:
+        elif clan==mage:
+            if marriageproposalfrom==0:
                 print("You have been sent a message from the Trent clan.")
-                input()
-                if chargender=="boy":
-                    print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Whappy=Whappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Whappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                       
-                elif chargender=="girl":
-                    print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                    print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                    input()
-                    marriageacceptance=input("Would you like to marry her?")
-                    if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                        print("Your wedding takes place immediately. You are now married.")
-                        krikor=krikor-5000
-                        Whappy=Whappy*2
-                        print("You now have", krikor, "krikor and a happiness of", Whappy, ".")
-                    else:
-                        print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-                elif marriageproposalfrom==1:
-                    print("You have been sent a message from the Mage clan.")
-                    input()
-                    if chargender=="boy":
-                        print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                        print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                        input()
-                        marriageacceptance=input("Would you like to marry her?")
-                        if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                            print("Your wedding takes place immediately. You are now married.")
-                            krikor=krikor-5000
-                            Whappy=Whappy*2
-                            print("You now have", krikor, "krikor and a happiness of", Whappy, ".")
-                        else:
-                            print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                           
-                    elif chargender=="girl":
-                        print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                        print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                        input()
-                        marriageacceptance=input("Would you like to marry her?")
-                        if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                            print("Your wedding takes place immediately. You are now married.")
-                            krikor=krikor-5000
-                            Whappy=Whappy*2
-                            print("You now have", krikor, "krikor and a happiness of", Whappy, ".")
-                        else:
-                            print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-
-        elif clan == archer:
+            else:
+                print("You have been sent a message from the Archer clan.")
+        elif clan==warrior:
+            if marriageproposalfrom==0:
+                print("You have been sent a message from the Trent clan.")
+            else:
+                print("You have been sent a rare message from the Mage clan.")
+        elif clan==archer:
             print("You have been sent a message from the Mage clan.")
+        input()
+            
+        if chargender=="boy":
+            print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
+            print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
             input()
-            if chargender=="boy":
-                print("Their leader has a young daughter they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                print("The dowry is 5,000 krikor, but a wife would be sure to double your clan's happiness.")
-                input()
-                marriageacceptance=input("Would you like to marry her?")
-                if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                    print("Your wedding takes place immediately. You are now married.")
-                    krikor=krikor-5000
+            marriageacceptance=input("Would you like to marry her? Yes or no?")
+            if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y":
+                print("Your wedding takes place immediately. You are now married.")
+                krikor=krikor-5000
+                if clan == trent:
+                    Thappy=Thappy*2
+                    print("You now have", krikor, "krikor and a happiness of", Thappy, ".")
+                if clan == mage:
+                    Mhappy=Mhappy*2
+                    print("You now have", krikor, "krikor and a happiness of", Mhappy, ".")
+                if clan == warrior:
+                    Whappy=Whappy*2
+                    print("You now have", krikor, "krikor and a happiness of", Whappy, ".")
+                if clan == archer:
                     Ahappy=Ahappy*2
                     print("You now have", krikor, "krikor and a happiness of", Ahappy, ".")
-                else:
-                    print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                        
-            elif chargender=="girl":
-                print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
-                print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
-                input()
-                marriageacceptance=input("Would you like to marry her?")
-                if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
-                    print("Your wedding takes place immediately. You are now married.")
-                    krikor=krikor-5000
+            else:
+                print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")                       
+
+        elif chargender=="girl":
+            print("Their leader has a young son they would like you to marry. If you do, you will have to pay a dowry to the leader.")
+            print("The dowry is 5,000 krikor, but a husband would be sure to double your clan's happiness.")
+            input()
+            marriageacceptance=input("Would you like to marry her?")
+            if marriageacceptance.lower()=="yes" or marriageacceptance.lower()=="y" or marriageacceptance.lower()=="yeah":
+                print("Your wedding takes place immediately. You are now married.")
+                krikor=krikor-5000
+                if clan ==trent:
+                    Thappy=Thappy*2
+                    print("You now have", krikor, "krikor and a happiness of", Thappy, ".")
+                if clan ==mage:
+                    Mhappy=Mhappy*2
+                    print("You now have", krikor, "krikor and a happiness of", Mhappy, ".")
+                if clan == warrior:
+                    Whappy=Whappy*2
+                    print("You now have", krikor, "krikor and a happiness of", Whappy, ".")
+                if clan == archer:
                     Ahappy=Ahappy*2
                     print("You now have", krikor, "krikor and a happiness of", Ahappy, ".")
-                else:
-                    print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
-
-    elif randomchoiceofevents==1:
-        print("")
-        #random event 2
-    elif randomchoiceofevents==2:
-        print("")
-        #random event 3
-    elif randomchoiceofevents==3:
-        print("")
-        #random event 4
-    elif randomchoiceofevents==4:
-        print("")
-        #random event 5
-
+            else:
+                print("You don't get married, and since the public never knew about this proposal, your happiness stays the same.")
 
 def trentgame():
     trentinitialproblem()
@@ -3705,9 +5207,25 @@ def clangame():
     elif clan=="trent":
         trentgame()
 
+
 def trinity():
     intro()
     clangame()
 
 
-trinity()
+def rules():
+    print("")
+
+
+def openinggame():
+    print("You have entered the game of Trinity")
+    input()
+    startgame=input("Do you wish to begin the game, learn the rules and how to play, or change the presets? Type 'begin', 'rules' or 'presets'.")
+    if startgame=="begin":
+        trinity()
+    elif startgame=="rules":
+        rules()
+    elif startgaame=="presets":
+        presets()
+        trinity()
+openinggame()
