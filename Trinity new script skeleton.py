@@ -5295,7 +5295,39 @@ def trinity():
 
 
 def rules():
-    print("")
+    print("""Trinity rules
+
+None of the questions or inputs are case sensitive.
+
+In dialogue, the characters will have their name before they speak, but if it is just a monologue, 
+speech will be shown using quotation marks, like these: ‘  ’
+
+Any choices neccecary will be given outside of dialogue, followed by a question mark: ?, so as to make player input easier to follow.
+
+Each normal turn takes place at the end of a week, when you are given information on who you have to sacrifice to, 
+what has happened, and what the trader can sell you.
+For forgetting sacrifices, or not sacrificing enough, you can be punished by the gods, and your stats go down.
+
+When presented with a ‘yes’ or ‘no’ question, there are a limited amount of options you can input. 
+You can use either a ‘yes’ or a ‘y’ to say yes, but anything else to say no. 
+Some questions require a b or c answers too.
+
+The Free Trader:
+In the incomplete full version, the free trader supplies you with the same things, which have different effects. 
+The weapons will change your military power and amount of people. 
+The food will impact on how much work gets done, and materials allow you to build settlements or make simple weapons from scratch. 
+You will also be able to sell back to him, for a price of your choice, which he may accept or not. 
+In the current game version, however, it only simulates this interaction, and the free trader does nothing to help you.
+If you input a non-recognised amount, the free trader shows you a different selection of items.
+
+The game cannot be saved due to the impossibility of such a feat, so all playthroughs must be completed in the same shell.
+
+To progress through the story, press enter after every line of text.
+
+Press enter now to progress to the game itself.""")
+
+input()
+
 
 
 def openinggame():
